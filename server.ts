@@ -183,7 +183,13 @@ async function startServer() {
     app.use(vite.middlewares);
 
     app.get('*', async (req, res, next) => {
-      if (req.path.startsWith('/api')) {
+      if (
+        req.path.startsWith('/api') ||
+        req.path.startsWith('/@') ||
+        req.path.startsWith('/node_modules') ||
+        req.path.startsWith('/src') ||
+        (req.path.includes('.') && !req.path.endsWith('.html'))
+      ) {
         return next();
       }
       try {
