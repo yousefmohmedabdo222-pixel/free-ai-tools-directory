@@ -1,0 +1,6 @@
+{
+  "name": "دليل أدوات الذكاء الاصطناعي المجانية",
+  "description": "دليل شامل وتفاعلي لأفضل أدوات الذكاء الاصطناعي المجانية للمبرمجين، الطلاب، ومطوري الألعاب مع مقارنة النماذج ومكتبة برومبتات جاهزة للنسخ.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
