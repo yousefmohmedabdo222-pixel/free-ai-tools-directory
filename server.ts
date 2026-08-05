@@ -4,7 +4,7 @@ import fs from 'fs';
 import { fileURLToPath } from 'url';
 import { GoogleGenAI } from '@google/genai';
 import dotenv from 'dotenv';
-import { BLOG_POSTS_DATA, findBlogPostBySlug } from './src/data/blogData.js';
+import { BLOG_POSTS_DATA, findBlogPostBySlug } from './src/data/blogData';
 
 dotenv.config();
 
@@ -177,26 +177,25 @@ async function startServer() {
     const { createServer: createViteServer } = await import('vite');
     const vite = await createViteServer({
       server: { middlewareMode: true, port: Number(PORT) },
-      appType: 'spa',
+      appType: 'custom',
     });
 
-    app.use(async (req, res, next) => {
-      // Pass API requests or static assets with extensions to Vite
-      if (req.path.startsWith('/api') || (req.path.includes('.') && !req.path.endsWith('.html'))) {
+    app.use(vite.middlewares);
+
+    app.get('*', async (req, res, next) => {
+      if (req.path.startsWith('/api')) {
         return next();
       }
       try {
         let template = fs.readFileSync(path.resolve(__dirname, 'index.html'), 'utf-8');
         template = await vite.transformIndexHtml(req.originalUrl, template);
         const html = injectSeoIntoHtml(template, req.path);
-        res.status(200).set({ 'Content-Type': 'text/html' }).end(html);
+        res.status(200).set({ 'Content-Type': 'text/html' }).send(html);
       } catch (e) {
         vite.ssrFixStacktrace(e as Error);
         next(e);
       }
     });
-
-    app.use(vite.middlewares);
   } else {
     app.use(express.static(path.resolve(__dirname, 'dist'), { index: false }));
     app.get('*', (req, res) => {
