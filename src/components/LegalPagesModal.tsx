@@ -200,10 +200,26 @@ export const LegalPagesModal: React.FC<LegalPagesModalProps> = ({
           {/* 3. About Us */}
           {activeTab === 'about' && (
             <div className="space-y-4">
-              <h3 className="text-lg font-bold text-indigo-400">من نحن (About Us)</h3>
+              <h3 className="text-lg font-bold text-indigo-400">من نحن (About Us) وفريق التحرير</h3>
               <p className="text-slate-300 leading-relaxed">
                 "دليل أدوات الذكاء الاصطناعي المجانية" هو مبادرة عربية تقنية مستقلة انطلقت عام 2026 بهدف دعم المبرمجين، الطلاب، الباحثين، ومطوري الألعاب العرب عبر توفير منصة موحدة وشاملة لاستكشاف ومقارنة وتجربة أحدث أدوات الذكاء الاصطناعي المتاحة مجاناً بالكامل.
               </p>
+
+              {/* Founder & Author E-E-A-T Card */}
+              <div className={`p-4 rounded-xl border ${darkMode ? 'bg-slate-950/80 border-indigo-500/30' : 'bg-indigo-50/50 border-indigo-200'} space-y-2`}>
+                <div className="flex items-center gap-2.5">
+                  <div className="w-9 h-9 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 flex items-center justify-center text-white font-extrabold text-xs shadow-md">
+                    يـم
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-white text-sm">المؤسس والكاتب الرئيسي: يوسف محمد</h4>
+                    <p className="text-[11px] text-indigo-400 font-medium">مهندس برمجيات وخبير في حلول الذكاء الاصطناعي وتطوير تطبيقات الويب</p>
+                  </div>
+                </div>
+                <p className="text-xs text-slate-300 leading-relaxed pt-2 border-t border-slate-800/80">
+                  يقف خلف المنصة والمحتوى <strong>المهندس يوسف محمد</strong>، مهندس برمجيات متخصص في بناء الأنظمة التفاعلية واختبار نماذج الذكاء الاصطناعي المعالجة للأكواد البرمجية (مثل Claude 3.5 Sonnet, ChatGPT, DeepSeek-R1, و Ollama). انطلق هذا الدليل من دافع توفير مصدر موثوق وشفاف يلتزم بمعايير الجودة والخبرة الميدانية (Google E-E-A-T)، حيث يُفحص ويختبر كل محتوى وأداة وبرومبت يدوياً قبل اعتماده وتوثيقه.
+                </p>
+              </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-4">
                 <div className={`p-4 rounded-xl border ${darkMode ? 'bg-slate-950 border-slate-800' : 'bg-slate-50 border-slate-200'}`}>
