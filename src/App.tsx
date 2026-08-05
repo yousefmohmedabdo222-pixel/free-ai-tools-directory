@@ -17,7 +17,7 @@ import { Footer } from './components/Footer';
 import { AI_TOOLS_DATA } from './data/toolsData';
 import { AI_PROMPTS_DATA } from './data/promptsData';
 import { AI_MODELS_DATA } from './data/modelsData';
-import { BLOG_POSTS_DATA } from './data/blogData';
+import { BLOG_POSTS_DATA, findBlogPostBySlug } from './data/blogData';
 
 import { AITool, ToolCategory, LegalPageType, BlogPost } from './types';
 import { Check, BookOpen, ArrowLeft, Sparkles } from 'lucide-react';
@@ -76,6 +76,39 @@ export default function App() {
     localStorage.setItem('ai_directory_favorites', JSON.stringify(favoritesList));
   }, [favoritesList]);
 
+  // Handle URL route mapping and browser back/forward buttons
+  useEffect(() => {
+    const syncRouteFromLocation = () => {
+      const pathname = window.location.pathname;
+      if (pathname.startsWith('/blog/')) {
+        const slug = pathname.replace(/^\/blog\//, '');
+        const post = findBlogPostBySlug(slug);
+        if (post) {
+          setSelectedArticle(post);
+          setActiveSection('blog');
+          document.title = `${post.title} | دليل أدوات الذكاء الاصطناعي المجانية`;
+          return;
+        }
+      }
+      if (pathname === '/blog' || pathname === '/blog/') {
+        setSelectedArticle(null);
+        setActiveSection('blog');
+        document.title = 'قسم المقالات والشروحات التقنية | دليل أدوات الذكاء الاصطناعي المجانية';
+        return;
+      }
+      // Home / main directory view
+      setSelectedArticle(null);
+      if (pathname === '/' || pathname === '') {
+        setActiveSection('home');
+        document.title = 'دليل أدوات الذكاء الاصطناعي المجانية 2026 | للمبرمجين والطلاب ومطوري الألعاب';
+      }
+    };
+
+    syncRouteFromLocation();
+    window.addEventListener('popstate', syncRouteFromLocation);
+    return () => window.removeEventListener('popstate', syncRouteFromLocation);
+  }, []);
+
   const showToast = (msg: string) => {
     setToastMessage(msg);
     setTimeout(() => setToastMessage(null), 3000);
@@ -83,11 +116,18 @@ export default function App() {
 
   const handleSelectSection = (sectionId: string) => {
     setActiveSection(sectionId);
+    setSelectedArticle(null);
     if (sectionId === 'blog') {
-      setSelectedArticle(null);
+      if (window.location.pathname !== '/blog') {
+        window.history.pushState({}, '', '/blog');
+      }
+      document.title = 'قسم المقالات والشروحات التقنية | دليل أدوات الذكاء الاصطناعي المجانية';
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
-      setSelectedArticle(null);
+      if (window.location.pathname !== '/') {
+        window.history.pushState({}, '', '/');
+      }
+      document.title = 'دليل أدوات الذكاء الاصطناعي المجانية 2026 | للمبرمجين والطلاب ومطوري الألعاب';
       setTimeout(() => {
         const el = document.getElementById(sectionId);
         if (el) {
@@ -99,10 +139,26 @@ export default function App() {
     }
   };
 
-  // Select an article to view in detailed mode
+  // Select an article to view in detailed mode with URL update
   const handleSelectArticle = (post: BlogPost) => {
     setSelectedArticle(post);
     setActiveSection('blog');
+    const targetUrl = `/blog/${post.slug}`;
+    if (window.location.pathname !== targetUrl) {
+      window.history.pushState({ articleSlug: post.slug }, '', targetUrl);
+    }
+    document.title = `${post.title} | دليل أدوات الذكاء الاصطناعي المجانية`;
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  // Return to blog list from article view
+  const handleBackToBlogList = () => {
+    setSelectedArticle(null);
+    setActiveSection('blog');
+    if (window.location.pathname !== '/blog') {
+      window.history.pushState({}, '', '/blog');
+    }
+    document.title = 'قسم المقالات والشروحات التقنية | دليل أدوات الذكاء الاصطناعي المجانية';
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -209,7 +265,7 @@ export default function App() {
           <ArticleView
             post={selectedArticle}
             darkMode={darkMode}
-            onBackToList={() => setSelectedArticle(null)}
+            onBackToList={handleBackToBlogList}
             onOpenAssistantWithTopic={(topic) => handleTestPromptWithAI(topic)}
           />
         ) : activeSection === 'blog' ? (

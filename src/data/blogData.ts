@@ -5,9 +5,9 @@ export const BLOG_POSTS_DATA: BlogPost[] = [
   // ARTICLE 1: الدليل الشامل لاستخدام ChatGPT في البرمجة (500-1000 كلمة)
   // =========================================================================
   {
-    id: 'chatgpt-programming-comprehensive-guide',
+    id: 'chatgpt-programming-guide',
     title: 'الدليل الشامل لاستخدام ChatGPT في البرمجة: الممارسات الأفضل، الهندسة المعمارية، وتجنب الهلوسة البرمجية',
-    slug: 'chatgpt-programming-comprehensive-guide',
+    slug: 'chatgpt-programming-guide',
     excerpt: 'دليل عملي شامل يوضح لك كيفية الاستفادة القسوى من نموذج ChatGPT في كتابة الأكواد المصدرية، بناء المعماريات البرمجية، وتصحيح الأخطاء مع أمثلة واقعية من تجربة حقيقية.',
     category: 'شروحات عميقة',
     author: 'أحمد محمود - مهندس برمجيات',
@@ -124,9 +124,9 @@ export const BLOG_POSTS_DATA: BlogPost[] = [
   // ARTICLE 2: مقارنة تفصيلية: ChatGPT vs Claude vs DeepSeek (500-1000 كلمة)
   // =========================================================================
   {
-    id: 'chatgpt-vs-claude-vs-deepseek-comparison-2026',
+    id: 'ai-models-comparison-2026',
     title: 'مقارنة تفصيلية: ChatGPT (GPT-4o/o1) vs Claude 3.5 Sonnet vs DeepSeek-R1 - أيهما الأفضل للمبرمجين؟',
-    slug: 'chatgpt-vs-claude-vs-deepseek-comparison-2026',
+    slug: 'ai-models-comparison-2026',
     excerpt: 'مقارنة شاملة ودقيقة تقارن بين أفضل 3 نماذج ذكاء اصطناعي في كتابة وتصحيح الأكواد البرمجية، الأداء، السرعة، وسعة نافذة السياق مع تجارب حقيقية.',
     category: 'مقارنات تقنية',
     author: 'فريق التحرير التقني',
@@ -249,9 +249,9 @@ export const BLOG_POSTS_DATA: BlogPost[] = [
   // ARTICLE 3: كيف تكتب برومبتات احترافية للذكاء الاصطناعي مع 50 مثال (500-1000 كلمة)
   // =========================================================================
   {
-    id: 'how-to-write-professional-ai-prompts-50-examples',
+    id: 'professional-prompts-guide',
     title: 'كيف تكتب برومبتات احترافية للذكاء الاصطناعي (مع 50 مثالاً تطبيقياً جاهزاً للمبرمجين)',
-    slug: 'how-to-write-professional-ai-prompts-50-examples',
+    slug: 'professional-prompts-guide',
     excerpt: 'دليل عملي شامل لتعلم فن هندسة البرومبتات، وإتقان الصيغ الذهبية للتخاطب مع الذكاء الاصطناعي مع 50 مثالاً عملياً مقسماً للمبرمجين والمطورين.',
     category: 'شروحات عميقة',
     author: 'أحمد محمود - مهندس برمجيات',
@@ -396,9 +396,9 @@ export const BLOG_POSTS_DATA: BlogPost[] = [
   // ARTICLE 4: أفضل 20 أداة AI مجانية للمبرمجين في 2026 (500-1000 كلمة)
   // =========================================================================
   {
-    id: 'top-20-free-ai-tools-for-developers-2026',
+    id: 'best-20-free-ai-tools-2026',
     title: 'أفضل 20 أداة AI مجانية للمبرمجين في 2026: دليل شامل لتطوير التطبيقات والويب والألعاب',
-    slug: 'top-20-free-ai-tools-for-developers-2026',
+    slug: 'best-20-free-ai-tools-2026',
     excerpt: 'استعراض تفصيلي لأبرز 20 أداة ذكاء اصطناعي مجانية بالكامل للمبرمجين والطلاب لمساعدتك في كتابة الكود، توليد الواجهات، وتصميم الألعاب في 2026.',
     category: 'دليل الأدوات',
     author: 'فريق التحرير التقني',
@@ -495,9 +495,9 @@ export const BLOG_POSTS_DATA: BlogPost[] = [
   // ARTICLE 5: كيف تستخدم الذكاء الاصطناعي لتعلم البرمجة بسرعة (500-1000 كلمة)
   // =========================================================================
   {
-    id: 'how-to-use-ai-to-learn-programming-fast',
+    id: 'learn-programming-with-ai',
     title: 'كيف تستخدم الذكاء الاصطناعي لتعلم البرمجة بسرعة: خارطة طريق عملية للمبتدئين',
-    slug: 'how-to-use-ai-to-learn-programming-fast',
+    slug: 'learn-programming-with-ai',
     excerpt: 'استراتيجيات عملية مجربة لتحويل الذكاء الاصطناعي إلى معلم برمجة خصوصي صبور يشرح المفاهيم، يراجع الأكواد، ويساعدك في اختصار سنوات التعلم في أشهر معدودة.',
     category: 'شروحات عميقة',
     author: 'سارة خالد - مدربة تقنية',
@@ -624,3 +624,35 @@ export const BLOG_POSTS_DATA: BlogPost[] = [
     `
   }
 ];
+
+export const findBlogPostBySlug = (slugOrPath: string): BlogPost | undefined => {
+  if (!slugOrPath) return undefined;
+  const cleanSlug = slugOrPath.toLowerCase().trim().replace(/^\/blog\//, '').replace(/^\//, '');
+  if (!cleanSlug) return undefined;
+
+  // Direct match by slug or id
+  const exact = BLOG_POSTS_DATA.find((post) => post.slug === cleanSlug || post.id === cleanSlug);
+  if (exact) return exact;
+
+  // Match aliases or partial matches
+  if (cleanSlug.includes('chatgpt-programming') || cleanSlug === 'chatgpt-programming-guide') {
+    return BLOG_POSTS_DATA.find((p) => p.slug === 'chatgpt-programming-guide');
+  }
+  if (cleanSlug.includes('comparison') || cleanSlug.includes('ai-models') || cleanSlug === 'ai-models-comparison-2026') {
+    return BLOG_POSTS_DATA.find((p) => p.slug === 'ai-models-comparison-2026');
+  }
+  if (cleanSlug.includes('prompt') || cleanSlug === 'professional-prompts-guide') {
+    return BLOG_POSTS_DATA.find((p) => p.slug === 'professional-prompts-guide');
+  }
+  if (cleanSlug.includes('20-free') || cleanSlug.includes('top-20') || cleanSlug === 'best-20-free-ai-tools-2026') {
+    return BLOG_POSTS_DATA.find((p) => p.slug === 'best-20-free-ai-tools-2026');
+  }
+  if (cleanSlug.includes('learn-programming') || cleanSlug === 'learn-programming-with-ai') {
+    return BLOG_POSTS_DATA.find((p) => p.slug === 'learn-programming-with-ai');
+  }
+  if (cleanSlug.includes('ollama') || cleanSlug === 'deepseek-ollama-local-guide') {
+    return BLOG_POSTS_DATA.find((p) => p.slug === 'deepseek-ollama-local-guide');
+  }
+
+  return undefined;
+};
