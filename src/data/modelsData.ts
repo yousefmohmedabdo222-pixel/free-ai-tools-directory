@@ -2,34 +2,62 @@ import { AIModelSpec } from '../types';
 
 export const AI_MODELS_DATA: AIModelSpec[] = [
   {
-    id: 'deepseek-r1',
-    name: 'DeepSeek-R1',
-    nameEn: 'DeepSeek-R1 Reasoning Engine',
-    provider: 'DeepSeek AI',
+    id: 'gemini-37-flash',
+    name: 'Gemini 3.7 Flash',
+    nameEn: 'Gemini 3.7 Flash Workhorse',
+    provider: 'Google DeepMind',
     releaseYear: '2026',
-    contextWindow: '128K Token',
-    parameterCount: '671B MoE (37B نشط) + نسخ مقطرة (1.5B - 70B)',
-    architecture: 'DeepSeek-V3-Base مع تدريب تعزيزي استدلالي مكثف (Large-scale RL)',
-    modelType: 'reasoning',
-    freeDailyTier: 'مجاني 100% وبلا حدود عبر الويب والتطبيق + مفتوح المصدر (MIT) للتحميل',
-    speedRating: 8.5,
+    contextWindow: '1,000,000 Token (مليون توكن كامل)',
+    parameterCount: 'Frontier Multimodal Workhorse Scale',
+    architecture: 'Native Multimodal متقدم مع محرك استدلال برمجي فائق الدقة (Agentic Core)',
+    modelType: 'coding',
+    freeDailyTier: 'متاح مجاناً عبر Google AI Studio (15 طلب/دقيقة) وتطبيق Gemini مع Spark Agent',
+    speedRating: 10,
     codingRating: 10,
-    reasoningRating: 10,
-    arabicRating: 9.3,
-    visionAudioSupport: 'نصوص وأكواد برمجية ومسائل رياضية معقدة',
+    reasoningRating: 9.8,
+    arabicRating: 9.7,
+    visionAudioSupport: 'نصوص، صور، صوت حي ثنائي الاتجاه، وفيديو بزمن استجابة لحظي',
     strengths: [
-      'تفوق قياسي عالمي في الرياضيات والبرمجة التنافسية والمنطق الخالص',
-      'شفافية كاملة عبر عرض خطوات وسلسلة التفكير (Chain-of-Thought)',
-      'مفتوح المصدر بالكامل (MIT License) وقابل للتشغيل محلياً عبر Ollama',
-      'دعم ممتاز للغة العربية والتعامل مع الأخطاء البرمجية الصعبة'
+      'أحدث وأقوى نموذج عملي لتطوير الويب وهندسة البرمجيات وبناء الوكلاء (AI Agents)',
+      'دقة برمجية استثنائية من المحاولة الأولى (First-pass Code Accuracy)',
+      'نافذة سياق عملاقة 1,000,000 توكن مع معالجة وتحليل فائقة السرعة للمستندات والوسائط',
+      'تأريض مباشر ومحدث بنتائج محرك بحث Google مع أدوات استدعاء برمجية مدمجة'
     ],
     limitations: [
-      'يستغرق وقتاً أطول في الاستجابة بسبب إنتاج خطوات التفكير المعمقة',
-      'غير مخصص لتوليد الصور أو الصوت المباشر'
+      'للمسائل الرياضية الفلسفية المعقدة جداً قد يتطلب توجيه برومبت تفصيلي'
     ],
-    bestUseCases: 'معالجة المسائل البرمجية المستعصية، التفكير المنطقي العميق، تحليل البيانات الشاقة، والبحث الأكاديمي مجاناً.',
-    freeAccessUrl: 'https://chat.deepseek.com',
-    badge: 'الأقوى في المنطق والرياضيات'
+    bestUseCases: 'بناء تطبيقات الويب الكاملة، تصحيح مستودعات الأكواد (Debugging)، الوكلاء الأذكياء (Autonomous Agents)، وتحليل البيانات الضخمة.',
+    freeAccessUrl: 'https://aistudio.google.com',
+    badge: 'الأحدث عالمياً وأقوى كود 2026'
+  },
+  {
+    id: 'openai-gpt-5',
+    name: 'OpenAI GPT-5',
+    nameEn: 'OpenAI GPT-5 Unified Flagship',
+    provider: 'OpenAI',
+    releaseYear: '2026',
+    contextWindow: '400K Token (272K دخل + 128K تفكير وخرج)',
+    parameterCount: 'Next-Gen Frontier Multimodal Scale',
+    architecture: 'Unified System مع موجه ذكي (Smart Router) يوازن تلقائياً بين Fast Mode و Thinking Mode',
+    modelType: 'reasoning',
+    freeDailyTier: 'متاح بحصص يومية متجددة لجميع مستخدمي ChatGPT مع التبديل التلقائي',
+    speedRating: 9.4,
+    codingRating: 9.9,
+    reasoningRating: 9.9,
+    arabicRating: 9.6,
+    visionAudioSupport: 'نصوص، رؤية بصرية عالية الدقة، صوت طبيعي، وتحليل ملفات معقدة',
+    strengths: [
+      'نظام موحد ذكي يتنقل تلقائياً بين التوليد اللحظي السريع والتفكير الاستدلالي العميق',
+      'انخفاض الهلوسة بنسبة 45% مقارنة بالجيل السابق مع دقة 94.6% في AIME 2025 و 74.9% في SWE-bench',
+      'قدرات تنفيذية فائقة للمهام متعددة المراحل والوكلاء المستقلين',
+      'تكامل شامل مع تصفح الويب المباشر وتوليد الصور وتشغيل كود بايثون'
+    ],
+    limitations: [
+      'الحصص المتاحة للتفكير العميق المقنن تتطلب اشتراكاً موسعاً عند الضغط العالي'
+    ],
+    bestUseCases: 'حل المسائل العلمية والبرمجية المعقدة، التحليل المؤسسي، والتطبيقات متعددة الوسائط.',
+    freeAccessUrl: 'https://chatgpt.com',
+    badge: 'الجيل الرائد من OpenAI'
   },
   {
     id: 'claude-37-sonnet',
@@ -37,71 +65,128 @@ export const AI_MODELS_DATA: AIModelSpec[] = [
     nameEn: 'Claude 3.7 Sonnet Hybrid',
     provider: 'Anthropic',
     releaseYear: '2026',
-    contextWindow: '200K Token (مع خرج يصل إلى 64K)',
-    parameterCount: 'Frontier Model Scale',
+    contextWindow: '200K Token (خرج يصل إلى 128K في وضع التفكير)',
+    parameterCount: 'Frontier Hybrid Model Scale',
     architecture: 'Hybrid Dual-Mode (استجابة لحظية قياسية + تفكير استدلالي موسع Extended Thinking)',
     modelType: 'reasoning',
-    freeDailyTier: 'حدود يومية مجانية تتجدد كل بضع ساعات على Claude.ai',
-    speedRating: 9.4,
+    freeDailyTier: 'متاح مجاناً بحصص تتجدد دورياً عبر Claude.ai ومنصة المطورين',
+    speedRating: 9.3,
     codingRating: 10,
     reasoningRating: 10,
     arabicRating: 9.8,
-    visionAudioSupport: 'نصوص، وثائق معقدة، ورؤية بصرية (Vision) متقدمة',
+    visionAudioSupport: 'نصوص، وثائق معقدة، ورؤية بصرية (Vision) دقيقة',
     strengths: [
-      'المرونة الفائقة بين الرد اللحظي الفوري والتفكير العميق القابل للتحكم',
-      'ميزة Artifacts الثورية لمعاينة واجهات React و HTML وتطبيقات الويب حياً',
-      'أفضل وأفصح أسلوب كتابة طبيعي وسلس باللغة العربية في العالم',
-      'فهم بنيوي دقيق للأنظمة البرمجية متعددة الملفات والمكتبات الحديثة'
+      'أول نموذج هجين يجمع بين السرعة الفورية وعمق التفكير الاستدلالي مع إظهار خطوات التفكير',
+      'ميزة Artifacts المتطورة لمعاينة واجهات React و HTML والتطبيقات التفاعلية مباشرة',
+      'الأعلى فصاحة وبلاغة في صياغة اللغة العربية وتنسيق المحتوى الفاخر',
+      'تكامل مذهل مع بيئة Claude Code لتطوير المشاريع البرمجية من الطرفية'
     ],
     limitations: [
-      'الحصة المجانية على منصة الويب قد تنفذ سريعاً أثناء فترات الذروة',
-      'غير مفتوح الأوزان للاستضافة الذاتية بدون سحابة'
+      'الحدود المجانية اليومية قد تتأثر في أوقات ذروة الاستخدام العالمي'
     ],
-    bestUseCases: 'بناء واجهات المستخدم وتطبيقات الويب الكاملة، الكتابة والتحرير اللغوي الفاخر، والتحليل المنطقي المعقد.',
+    bestUseCases: 'تصميم وبناء واجهات المستخدم Frontend، كتابة النصوص والبحوث الراقية، وهندسة البرمجيات.',
     freeAccessUrl: 'https://claude.ai',
-    badge: 'الأفضل في الواجهات والتطوير'
+    badge: 'بطل واجهات React والأدب'
   },
   {
-    id: 'gemini-2-flash',
-    name: 'Gemini 2.0 Flash',
-    nameEn: 'Gemini 2.0 Flash Multimodal',
-    provider: 'Google DeepMind',
+    id: 'deepseek-r1',
+    name: 'DeepSeek-R1',
+    nameEn: 'DeepSeek-R1 Reasoning Engine',
+    provider: 'DeepSeek AI',
     releaseYear: '2026',
-    contextWindow: '1,000,000 Token (مليون توكن كامل)',
-    parameterCount: 'Ultra-Fast Frontier Scale',
-    architecture: 'Native Multimodal متزامن مع سرعة استجابة لا تتعدى أجزاء من الثانية',
-    modelType: 'multimodal',
-    freeDailyTier: 'مجاني عبر Google AI Studio (15 طلب/دقيقة) وتطبيق Gemini اليومي',
-    speedRating: 10,
-    codingRating: 9.2,
-    reasoningRating: 9.0,
-    arabicRating: 9.4,
-    visionAudioSupport: 'نصوص، صور، صوت ثنائي الاتجاه بالزمن الحقيقي، وفيديوهات طويلة',
+    contextWindow: '128K Token',
+    parameterCount: '671B MoE (37B نشط) + نسخ مقطرة خفيفة (1.5B - 70B)',
+    architecture: 'DeepSeek-V3-Base مع تدريب تعزيزي استدلالي ضخم (Large-scale RL)',
+    modelType: 'reasoning',
+    freeDailyTier: 'مجاني 100% وبلا حدود عبر موقع وتطبيق DeepSeek + مفتوح المصدر (MIT)',
+    speedRating: 8.6,
+    codingRating: 9.9,
+    reasoningRating: 10,
+    arabicRating: 9.3,
+    visionAudioSupport: 'نصوص وأكواد برمجية ومسائل رياضية معقدة',
     strengths: [
-      'أسرع زمن استجابة وتوليد في العالم بين كافة النماذج الرائدة (Ultra-Low Latency)',
-      'نافذة سياق عملاقة تتسع لـ 1,000,000 توكن لتحليل كتب وفيديوهات كاملة',
-      'اتصال وتأريض مباشر (Grounding) بمحرك بحث Google للبيانات اللحظية',
-      'دعم تفاعلي متقدم متعدد الوسائط للصوت والفيديو والصور'
+      'تفوق قياسي عالمي في الرياضيات والبرمجة التنافسية والمنطق الرياضي الخالص',
+      'شفافية تامة عبر عرض خطوات وسلسلة التفكير (Chain-of-Thought) بالتفصيل',
+      'مفتوح المصدر بالكامل (MIT License) وقابل للتشغيل محلياً عبر Ollama و vLLM',
+      'أحدث ثورة في كفاءة التكلفة والتدريب مفتوح المصدر'
     ],
     limitations: [
-      'قد يحتاج إلى برومبت دقيق ومحدد للمسائل التنافسية شديدة التعقيد'
+      'يستغرق بضع ثوانٍ إضافية في صياغة خطوات التفكير قبل إخراج الإجابة النهائية'
     ],
-    bestUseCases: 'تلخيص المستندات الضخمة والفيديوهات، المساعدات الصوتية الحية، والأنظمة التفاعلية فائقة السرعة.',
-    freeAccessUrl: 'https://aistudio.google.com',
-    badge: 'الأسرع وسياق مليون توكن'
+    bestUseCases: 'حل المسائل الرياضية المستعصية، الخوارزميات وهياكل البيانات المعقدة، والتشغيل المحلي على الخوادم الخاصة.',
+    freeAccessUrl: 'https://chat.deepseek.com',
+    badge: 'الاستدلال المفتوح الأقوى'
+  },
+  {
+    id: 'grok-3',
+    name: 'Grok 3',
+    nameEn: 'xAI Grok 3 Frontier',
+    provider: 'xAI (Elon Musk)',
+    releaseYear: '2026',
+    contextWindow: '128K Token',
+    parameterCount: 'Frontier Scale (مدرب على 200 ألف كرت H100 في Colossus)',
+    architecture: 'Multimodal Transformer مع أنماط Think Mode و Big Brain و DeepSearch الحية',
+    modelType: 'multimodal',
+    freeDailyTier: 'متاح مجاناً عبر منصة Grok.com وتطبيق X مع فترات استخدام مجانية',
+    speedRating: 9.6,
+    codingRating: 9.6,
+    reasoningRating: 9.7,
+    arabicRating: 9.1,
+    visionAudioSupport: 'نصوص، صور، بيانات لحظية من منصة X والويب المباشر',
+    strengths: [
+      'مدعوم بأقوى حاسوب فائق في العالم (Colossus Supercomputer)',
+      'ميزة DeepSearch للبحث والتقصي العميق في الإنترنت ومنصة X في الزمن الحقيقي',
+      'وضع Big Brain لتخصيص طاقة حوسبة إضافية للمسائل الشاقة والمعقدة',
+      'تفكير استدلالي متقدم وخفة ظل وتعبير غير مقيد'
+    ],
+    limitations: [
+      'بعض المزايا المتقدمة مثل Big Brain تتطلب خطط اشتراك في فترات الذروة'
+    ],
+    bestUseCases: 'التحري والبحث الصحفي والتقني اللحظي، التحليل المالي والسياسي، وحل المعضلات البرمجية.',
+    freeAccessUrl: 'https://grok.com',
+    badge: 'مدعوم بحاسوب Colossus الفائق'
+  },
+  {
+    id: 'openai-o3-mini',
+    name: 'OpenAI o3-mini',
+    nameEn: 'OpenAI o3-mini STEM Reasoning',
+    provider: 'OpenAI',
+    releaseYear: '2026',
+    contextWindow: '200K Token (مع 100K توكن خرج استدلالي)',
+    parameterCount: 'Compact High-Efficiency Reasoning Scale',
+    architecture: 'Advanced Reinforcement Learning مع تحكم في جهد التفكير (Reasoning Effort: Low/Med/High)',
+    modelType: 'reasoning',
+    freeDailyTier: 'متاح مجاناً بحصص يومية سخية في ChatGPT لجميع المستخدمين',
+    speedRating: 9.3,
+    codingRating: 9.7,
+    reasoningRating: 9.8,
+    arabicRating: 9.0,
+    visionAudioSupport: 'نصوص، أكواد، ودعم إخراج بيانات JSON المهيكلة (Structured Outputs)',
+    strengths: [
+      'سرعة استدلال مضاعفة مقارنة بنماذج o1 السابقة مع كفاءة استهلاك طاقة عالية',
+      'تألق جبار في مسابقات الرياضيات (AIME) والبرمجة التنافسية',
+      'إمكانية التحكم في زمن التفكير المطلوب للمهمة (Reasoning Effort)',
+      'دعم كامل لإخراج البيانات المهيكلة (Structured Outputs)'
+    ],
+    limitations: [
+      'غير مخصص لمعالجة الصور في بعض الواجهات'
+    ],
+    bestUseCases: 'المعادلات الرياضية والفيزيائية، الخوارزميات وهياكل البيانات الصعبة، وبناء عملاء الذكاء الاصطناعي (AI Agents).',
+    freeAccessUrl: 'https://chatgpt.com',
+    badge: 'استدلال STEM فائق السرعة'
   },
   {
     id: 'gemini-2-pro',
     name: 'Gemini 2.0 Pro',
-    nameEn: 'Gemini 2.0 Pro Experimental',
+    nameEn: 'Gemini 2.0 Pro Long-Context',
     provider: 'Google DeepMind',
     releaseYear: '2026',
-    contextWindow: '2,000,000 Token (2 مليون توكن)',
+    contextWindow: '2,000,000 Token (2 مليون توكن كاملة)',
     parameterCount: 'Frontier Scale MoE',
     architecture: 'High-Capacity Multimodal مع قدرات استدعاء أدوات وكود متطورة',
     modelType: 'coding',
     freeDailyTier: 'متاح مجاناً للمطورين والباحثين عبر Google AI Studio',
-    speedRating: 8.8,
+    speedRating: 8.9,
     codingRating: 9.8,
     reasoningRating: 9.7,
     arabicRating: 9.6,
@@ -113,45 +198,16 @@ export const AI_MODELS_DATA: AIModelSpec[] = [
       'ربط عميق بخدمات Google والأدوات الخارجية (Tool-use)'
     ],
     limitations: [
-      'أبطأ في التوليد مقارنة بـ Gemini 2.0 Flash'
+      'أبطأ قليلاً في زمن البدء مقارنة بـ Gemini 3.7 Flash'
     ],
     bestUseCases: 'هندسة المشاريع البرمجية الضخمة، تحليل الأبحاث والمكتبات العملاقة، والحلول متعددة الوسائط.',
     freeAccessUrl: 'https://aistudio.google.com',
     badge: 'أضخم سياق عالمي (2M)'
   },
   {
-    id: 'openai-o3-mini',
-    name: 'OpenAI o3-mini',
-    nameEn: 'OpenAI o3-mini Reasoning',
-    provider: 'OpenAI',
-    releaseYear: '2026',
-    contextWindow: '200K Token (مع 100K توكن خرج استدلالي)',
-    parameterCount: 'Compact STEM Reasoning',
-    architecture: 'Reinforcement Learning Reasoning مع تحكم في مستوى التفكير (Low/Med/High)',
-    modelType: 'reasoning',
-    freeDailyTier: 'متاح بحصص يومية لجميع مستخدمي منصة ChatGPT المجانية',
-    speedRating: 9.2,
-    codingRating: 9.7,
-    reasoningRating: 9.8,
-    arabicRating: 9.0,
-    visionAudioSupport: 'نصوص وأكواد برمجية مع دعم Function Calling و Structured JSON',
-    strengths: [
-      'سرعة استدلال مضاعفة مقارنة بنماذج o1 السابقة مع كفاءة استهلاك طاقة عالية',
-      'تألق جبار في مسابقات الرياضيات (AIME) والبرمجة التنافسية',
-      'إمكانية التحكم في زمن التفكير المطلوب للمهمة (Reasoning Effort)',
-      'دعم كامل لإخراج البيانات المهيكلة (Structured Outputs)'
-    ],
-    limitations: [
-      'لا يدعم رفع وتحليل الصور في بعض الواجهات مقارنة بـ GPT-4o'
-    ],
-    bestUseCases: 'المعادلات الرياضية والفيزيائية، الخوارزميات وهياكل البيانات الصعبة، وبناء عملاء الذكاء الاصطناعي (AI Agents).',
-    freeAccessUrl: 'https://chatgpt.com',
-    badge: 'استدلال STEM فائق السرعة'
-  },
-  {
     id: 'gpt-4o',
     name: 'GPT-4o (Omni)',
-    nameEn: 'GPT-4o Omni Flagship',
+    nameEn: 'GPT-4o Multimodal Flagship',
     provider: 'OpenAI',
     releaseYear: '2025',
     contextWindow: '128K Token',
@@ -171,40 +227,11 @@ export const AI_MODELS_DATA: AIModelSpec[] = [
       'بحث وتصفح حي للويب واستخراج المعلومات المحدثة'
     ],
     limitations: [
-      'أقل عمقاً في خطوات التفكير الاستدلالي الصرف مقارنة بـ DeepSeek-R1 و o3-mini'
+      'أقل عمقاً في خطوات التفكير الاستدلالي الصرف مقارنة بـ GPT-5 و DeepSeek-R1'
     ],
     bestUseCases: 'المحادثات العامة المتنوعة، تحليل المستندات والصور، والمساعد الصوتي التفاعلي اليومي.',
     freeAccessUrl: 'https://chatgpt.com',
     badge: 'الرائد المتعدد الوسائط'
-  },
-  {
-    id: 'gpt-4o-mini',
-    name: 'GPT-4o mini',
-    nameEn: 'GPT-4o mini Fast',
-    provider: 'OpenAI',
-    releaseYear: '2025',
-    contextWindow: '128K Token',
-    parameterCount: 'Lightweight Efficient Model',
-    architecture: 'Small-scale Highly Optimized Multimodal Transformer',
-    modelType: 'general',
-    freeDailyTier: 'مجاني وغير محدود تقريباً لجميع مستخدمي ChatGPT',
-    speedRating: 9.8,
-    codingRating: 8.5,
-    reasoningRating: 8.5,
-    arabicRating: 9.1,
-    visionAudioSupport: 'نصوص وصور ووثائق',
-    strengths: [
-      'خفيف جداً وسريع ومتاح للجميع بدون قيود استخدام خانقة',
-      'دعم ممتاز للمحادثات اليومية والترجمة وتدقيق النصوص',
-      'متصل بالإنترنت وميزة تحليل الملفات والصور البسيطة',
-      'أعلى استقرار وجهوزية بين الخدمات السحابية'
-    ],
-    limitations: [
-      'محدود في كتابة المشاريع البرمجية الضخمة وحل الألغاز المعقدة'
-    ],
-    bestUseCases: 'الاستخدام اليومي العام، صياغة الرسائل والإيميلات، والترجمة الفورية السريعة.',
-    freeAccessUrl: 'https://chatgpt.com',
-    badge: 'الأكثر انتشاراً وسرعة'
   },
   {
     id: 'qwen-25-coder-32b',

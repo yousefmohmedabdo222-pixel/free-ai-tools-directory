@@ -30,11 +30,12 @@ export const ModelComparison: React.FC<ModelComparisonProps> = ({
   // Category filter for the selector bar
   const [filterType, setFilterType] = useState<'all' | 'reasoning' | 'coding' | 'multimodal' | 'open-source'>('all');
 
-  // Selected models for side-by-side comparison (default 3 top models)
+  // Selected models for side-by-side comparison (default top models)
   const [selectedModelIds, setSelectedModelIds] = useState<string[]>([
-    'deepseek-r1',
+    'gemini-37-flash',
+    'openai-gpt-5',
     'claude-37-sonnet',
-    'gemini-2-flash',
+    'deepseek-r1',
   ]);
 
   const filteredModels = useMemo(() => {
