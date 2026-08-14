@@ -8,14 +8,14 @@ export const AI_TOOLS_DATA: AITool[] = [
     id: 'cursor-ide',
     name: 'Cursor IDE',
     nameEn: 'Cursor Code Editor',
-    description: 'محرر أكواد متطور مبني على VS Code مدمج بنماذج Claude 3.5 و GPT-4o للتطوير السريع وتعديل المشاريع متعددة الملفات.',
+    description: 'محرر أكواد متطور مبني على VS Code مدمج بنماذج Claude 3.7 Sonnet و GPT-5 و DeepSeek-R1 للتطوير السريع وتعديل المشاريع متعددة الملفات.',
     detailedGuide: {
-      overview: 'أداة Cursor IDE هي محرر أكواد ثوري قائم على بيئة VS Code تم تطويره خصيصاً لدمج الذكاء الاصطناعي في صلب عملية كتابة الأكواد المصدرية. يتيح لك المحرر العمل المباشر مع أحدث النماذج مثل Claude 3.5 Sonnet و GPT-4o لتعديل المشاريع كاملة وبناء الميزات المعقدة في ثوانٍ.',
+      overview: 'أداة Cursor IDE هي محرر أكواد ثوري قائم على بيئة VS Code تم تطويره خصيصاً لدمج الذكاء الاصطناعي في صلب عملية كتابة الأكواد المصدرية. يتيح لك المحرر العمل المباشر مع أحدث النماذج مثل Claude 3.7 Sonnet و GPT-5 و Gemini 3.7 Flash لتعديل المشاريع كاملة وبناء الميزات المعقدة في ثوانٍ.',
       whatItDoes: 'تتيح Cursor قراءة مجلدات المشروع بالكامل وفهم العلاقات بين الملفات. تقوم الأداة بإكمال الكود التلقائي الذكي أثناء الكتابة (Tab Autocomplete)، وإنشاء وتعديل عدة ملفات متزامنة عبر نافذة Composer، بالإضافة للقدرة على الإجابة عن الاستفسارات المعمارية وتتبع سجلات الأخطاء بدون مغادرة المحرر.',
       pros: [
         'دعم كامل لكافة إضافات وثيمات ومرافق VS Code الأصلية.',
         'ميزة Composer لتعديل عدة ملفات برمجية في نفس الوقت بنقرة زر.',
-        'تكامل ممتاز مع نماذج Claude 3.5 Sonnet و DeepSeek-R1 و GPT-4o.',
+        'تكامل ممتاز مع نماذج Claude 3.7 Sonnet و DeepSeek-R1 و GPT-5 و Gemini 3.7 Flash.',
         'فهم كامل لبنية المشروع والملفات المرفقة وتأمين الأنواع (TypeScript).'
       ],
       cons: [
@@ -29,7 +29,7 @@ export const AI_TOOLS_DATA: AITool[] = [
         'شاهد مراجعة التغييرات (Diff View) واضغط Accept لتطبيق التعديلات على الملفات.'
       ],
       practicalExamples: 'أثناء بناء تطبيق React، استخدم اختصار Ctrl + I واكتب: "أنشئ مكون جدول بيانات تفاعلي يدعم الفلترة والترتيب باستخدام Tailwind CSS و Lucide icons". سينشئ Cursor ملف Component جديد ويحدث ملف Types و App.tsx تلقائياً!',
-      alternatives: ['Windsurf Editor', 'VS Code with Continue.dev', 'GitHub Copilot', 'Replit AI']
+      alternatives: ['Windsurf Editor', 'Trae IDE', 'VS Code with Continue.dev', 'GitHub Copilot', 'Replit AI']
     },
     category: 'developers',
     categoryLabel: 'أدوات المبرمجين والطلاب',
@@ -37,7 +37,7 @@ export const AI_TOOLS_DATA: AITool[] = [
     pricingType: 'خطة مجانية سخية',
     rating: 4.9,
     directUrl: 'https://cursor.com',
-    tags: ['محرر أكواد', 'VS Code', 'Claude 3.5', 'تطوير سريع'],
+    tags: ['محرر أكواد', 'VS Code', 'Claude 3.7', 'GPT-5', 'تطوير سريع'],
     freeFeatures: [
       'نسخة برمجية حرة مع 2,000 إكمال تلقائي شهرياً',
       '50 طلب سريع مع محرر Composer ذكي',
@@ -534,22 +534,64 @@ export const AI_TOOLS_DATA: AITool[] = [
     id: 'claude-code-cli',
     name: 'Claude Code Agent CLI',
     nameEn: 'Claude Code Terminal Agent',
-    description: 'عميل برمجتي ذكي يعمل داخل سطر الأوامر (Terminal) يمتلك صلاحيات قراءة الأكواد وتنفيذ أوامر Git واختبارات التطبيق.',
+    description: 'عميل برمجي ذكي من Anthropic يعمل داخل سطر الأوامر (Terminal) مدعوم بـ Claude 3.7 Sonnet لإدارة المشاريع وكتابة الأكواد وأوامر Git تلقائياً.',
     category: 'developers',
     categoryLabel: 'أدوات المبرمجين والطلاب',
     iconName: 'Terminal',
     pricingType: 'خطة مجانية سخية',
-    rating: 4.9,
+    rating: 5.0,
     directUrl: 'https://docs.anthropic.com/en/docs/agents-and-tools/claude-code',
-    tags: ['Agentic CLI', 'Claude 3.5', 'أتمتة برمجية', 'Terminal'],
+    tags: ['Agentic CLI', 'Claude 3.7', 'أتمتة برمجية', 'Terminal', 'Anthropic'],
     freeFeatures: [
       'تنفيذ العمليات البرمجية المعقدة في الـ Terminal ببرومبت واحد',
-      'البحث الآلي في أخطاء الكود وتصحيحها ذاتياً',
-      'إجراء عمليات Git commit و PR بنظام خبير'
+      'البحث الآلي في أخطاء الكود وتصحيحها ذاتياً مع وضع التفكير Extended Thinking',
+      'إجراء عمليات Git commit و PR بنظام خبير وبناء ميزات كاملة'
     ],
     featured: true,
-    popularityCount: 29800,
+    popularityCount: 34500,
     addedDate: '2026-02-15'
+  },
+  {
+    id: 'trae-ide',
+    name: 'Trae AI IDE',
+    nameEn: 'Trae AI Code Editor',
+    description: 'محرر أكواد متكيف ومجاني بالكامل من ByteDance يوفر وصولاً مجانياً وغير محدود لنماذج Claude 3.7 Sonnet و GPT-4o لبناء وتعديل المشاريع.',
+    category: 'developers',
+    categoryLabel: 'أدوات المبرمجين والطلاب',
+    iconName: 'Code2',
+    pricingType: 'مجاني 100%',
+    rating: 4.9,
+    directUrl: 'https://trae.ai',
+    tags: ['محرر أكواد', 'Claude 3.7', 'GPT-4o', 'مجاني بالكامل', 'Trae Builder'],
+    freeFeatures: [
+      'استخدام غير محدود ومجاني 100% لنماذج Claude 3.7 Sonnet و GPT-4o',
+      'ميزة Trae Builder للتحكم الكامل وبناء التطبيقات من الصفر',
+      'دعم كامل لبيئة وإضافات VS Code الأصلية'
+    ],
+    featured: true,
+    popularityCount: 38200,
+    addedDate: '2026-03-01'
+  },
+  {
+    id: 'lovable-dev',
+    name: 'Lovable.dev',
+    nameEn: 'Lovable Full-Stack Builder',
+    description: 'منصة ثورية لبناء تطبيقات Full-Stack جاهزة للإنتاج (Production-ready) مع Supabase وقواعد البيانات والواجهات في دقائق.',
+    category: 'developers',
+    categoryLabel: 'أدوات المبرمجين والطلاب',
+    iconName: 'Layers',
+    pricingType: 'خطة مجانية سخية',
+    rating: 4.9,
+    directUrl: 'https://lovable.dev',
+    tags: ['Full-stack', 'React', 'Supabase', 'تطبيقات ويب', 'No-Code/Code'],
+    freeFeatures: [
+      'توليد تطبيقات متكاملة مع المصادقة وقواعد البيانات',
+      'تكامل مباشر مع GitHub و Supabase و Netlify',
+      'معاينة حية وفورية مع تعديل الكود المرئي والنصي'
+    ],
+    featured: true,
+    popularityCount: 42100,
+    addedDate: '2026-02-28'
   },
 
   // ==========================================
@@ -1530,45 +1572,45 @@ export const AI_TOOLS_DATA: AITool[] = [
     addedDate: '2026-01-02'
   },
   {
-    id: 'claude-35-free',
+    id: 'claude-37-free',
     name: 'Claude.ai Free',
-    nameEn: 'Claude 3.5 Sonnet Web',
-    description: 'منصة الدردشة الخاصة بشركة Anthropic التي تقدم نموذج Claude 3.5 Sonnet المتفوق في الكتابة والتحليل والبرمجة.',
+    nameEn: 'Claude 3.7 Sonnet Web',
+    description: 'منصة المحادثة الرائدة من Anthropic التي تقدم نموذج Claude 3.7 Sonnet الهجين مع ميزة التفكير الموسع وواجهات Artifacts التفاعلية.',
+    category: 'textGen',
+    categoryLabel: 'كتابة النصوص والأبحاث',
+    iconName: 'Bot',
+    pricingType: 'خطة مجانية سخية',
+    rating: 5.0,
+    directUrl: 'https://claude.ai',
+    tags: ['Claude 3.7', 'Anthropic', 'Artifacts', 'كتابة عربية', 'Extended Thinking'],
+    freeFeatures: [
+      'وصول مجاني يومي لنموذج Claude 3.7 Sonnet الهجين',
+      'ميزة Artifacts لمعاينة تطبيقات React والأكواد والتصاميم فوراً',
+      'رفع وتحليل المستندات والصور بذكاء لغوي وفصاحة عربية استثنائية'
+    ],
+    featured: true,
+    popularityCount: 61000,
+    addedDate: '2026-01-03'
+  },
+  {
+    id: 'chatgpt-free',
+    name: 'ChatGPT Free (GPT-5 & o3-mini)',
+    nameEn: 'ChatGPT OpenAI Web',
+    description: 'الخدمة الأكثر انتشاراً عالمياً مع دعم التبديل التلقائي لنموذج GPT-5 ونموذج الاستدلال السريع o3-mini والبحث المباشر.',
     category: 'textGen',
     categoryLabel: 'كتابة النصوص والأبحاث',
     iconName: 'Bot',
     pricingType: 'خطة مجانية سخية',
     rating: 4.9,
-    directUrl: 'https://claude.ai',
-    tags: ['Claude 3.5', 'Anthropic', 'Artifacts', 'كتابة عربية'],
-    freeFeatures: [
-      'وصول مجاني يومي لنموذج Claude 3.5 Sonnet',
-      'ميزة Artifacts لمعاينة الأكواد والتصاميم فوراً',
-      'رفع وتحليل المستندات والصور بذكاء عالي'
-    ],
-    featured: true,
-    popularityCount: 57000,
-    addedDate: '2026-01-03'
-  },
-  {
-    id: 'chatgpt-free',
-    name: 'ChatGPT Free (GPT-4o mini)',
-    nameEn: 'ChatGPT OpenAI Web',
-    description: 'الخدمة الأكثر انتشاراً عالمياً للدردشة وتوليد النصوص والترجمة مع دعم GPT-4o mini والبحث أونلاين.',
-    category: 'textGen',
-    categoryLabel: 'كتابة النصوص والأبحاث',
-    iconName: 'Bot',
-    pricingType: 'خطة مجانية سخية',
-    rating: 4.8,
     directUrl: 'https://chatgpt.com',
-    tags: ['OpenAI', 'ChatGPT', 'GPT-4o mini', 'محادثات'],
+    tags: ['OpenAI', 'ChatGPT', 'GPT-5', 'o3-mini', 'محادثات صوتية'],
     freeFeatures: [
-      'محادثات مجانية غير محدودة تقريباً بـ GPT-4o mini',
-      'إمكانية رفع الصور والملفات للتحليل',
-      'الوصول لمتجر GPTs والبحث المباشر في الويب'
+      'محادثات ذكية مجانية مع دعم GPT-5 ونموذج الاستدلال o3-mini',
+      'إمكانية رفع الصور والملفات وتوليد الصور وتصفح الويب المباشر',
+      'المحادثات الصوتية المتقدمة وتحليل الأكواد والبيانات'
     ],
     featured: true,
-    popularityCount: 65000,
+    popularityCount: 68000,
     addedDate: '2026-01-01'
   },
   {
@@ -1595,23 +1637,65 @@ export const AI_TOOLS_DATA: AITool[] = [
   {
     id: 'gemini-free',
     name: 'Google Gemini Web',
-    nameEn: 'Google Gemini 2.0 Flash',
-    description: 'منصة الذكاء الاصطناعي السريعة من Google المدمجة مع كافة خدمات Google Drive و Workspace و YouTube.',
+    nameEn: 'Google Gemini 3.7 Flash & 2.0',
+    description: 'منصة الذكاء الاصطناعي السريعة من Google المدمجة بنموذج Gemini 3.7 Flash وخدمات Google Workspace والبحث الفوري.',
     category: 'textGen',
     categoryLabel: 'كتابة النصوص والأبحاث',
     iconName: 'Sparkles',
     pricingType: 'مجاني 100%',
-    rating: 4.8,
+    rating: 4.9,
     directUrl: 'https://gemini.google.com',
-    tags: ['Google Gemini', 'سياق عملاق', 'ربط يوتيوب', 'بحث مباشر'],
+    tags: ['Google Gemini', 'Gemini 3.7 Flash', 'سياق مليون توكن', 'بحث مباشر'],
     freeFeatures: [
-      'استخدام مجاني لنموذج Gemini 2.0 Flash',
-      'سياق عملاق يتسع لملفات وفيديوهات كاملة',
-      'تكامل مباشر مع تطبيقات Google والخرائط'
+      'استخدام مجاني لنموذج Gemini 3.7 Flash فائق السرعة',
+      'سياق عملاق يتسع لمستندات وكتب وفيديوهات كاملة',
+      'تكامل مباشر مع تطبيقات Google والخرائط ومساعد Spark'
     ],
     featured: true,
-    popularityCount: 53000,
+    popularityCount: 56000,
     addedDate: '2026-01-05'
+  },
+  {
+    id: 'grok-3-web',
+    name: 'Grok 3 Web',
+    nameEn: 'xAI Grok 3 Chat & Search',
+    description: 'منصة المحادثة والبحث المباشر من xAI المدعومة بالحاسوب الفائق Colossus وميزات DeepSearch و Think Mode.',
+    category: 'textGen',
+    categoryLabel: 'كتابة النصوص والأبحاث',
+    iconName: 'Zap',
+    pricingType: 'خطة مجانية سخية',
+    rating: 4.8,
+    directUrl: 'https://grok.com',
+    tags: ['Grok 3', 'xAI', 'DeepSearch', 'Think Mode', 'بحث حي'],
+    freeFeatures: [
+      'بحث لحظي عميق في الويب ومنصة X عبر ميزة DeepSearch',
+      'نمط التفكير الاستدلالي المتقدم Think Mode لتحليل المسائل',
+      'توليد نصوص وتحليل مرئي بدون قيود مفرطة'
+    ],
+    featured: true,
+    popularityCount: 47800,
+    addedDate: '2026-02-25'
+  },
+  {
+    id: 'google-ai-studio',
+    name: 'Google AI Studio',
+    nameEn: 'Google AI Studio Developer Lab',
+    description: 'البيئة البرمجية المجانية من Google لتجربة واستخدام نماذج Gemini 3.7 Flash و Gemini 2.0 Pro والحصول على مفاتيح API مجانية.',
+    category: 'textGen',
+    categoryLabel: 'كتابة النصوص والأبحاث',
+    iconName: 'Code2',
+    pricingType: 'مجاني 100%',
+    rating: 5.0,
+    directUrl: 'https://aistudio.google.com',
+    tags: ['Google AI Studio', 'Gemini API', 'مجاني 100%', 'تطوير وبرمجة'],
+    freeFeatures: [
+      'مفاتيح API مجانية بمعدل 15 طلب في الدقيقة',
+      'سياق تجريبي حتى 2 مليون توكن كاملة',
+      'توليد الكود البرمجي وتخصيص معلمات النظام System Prompts'
+    ],
+    featured: true,
+    popularityCount: 52400,
+    addedDate: '2026-02-18'
   },
   {
     id: 'notion-ai-free',
