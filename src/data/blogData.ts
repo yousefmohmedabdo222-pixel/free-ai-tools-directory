@@ -8,15 +8,15 @@ export const BLOG_POSTS_DATA: BlogPost[] = [
     id: 'chatgpt-programming-guide',
     title: 'الدليل الشامل لاستخدام ChatGPT في البرمجة: الممارسات المتقدمة، هندسة الأنظمة، وتجنب الهلوسة البرمجية',
     slug: 'chatgpt-programming-guide',
-    excerpt: 'دليل عملي تفصيلي يستند إلى خبرة ميدانية في بناء الأنظمة البرمجية، يوضح كيفية تحويل ChatGPT إلى شريك برمجي متقدم لكتابة الأكواد، بناء المعماريات، تصحيح الثغرات وتوليد الاختبارات الآلية.',
+    excerpt: 'دليل عملي تفصيلي يستند إلى خبرة ميدانية في بناء الأنظمة البرمجية، يوضح كيفية تحويل ChatGPT إلى شريك برمجي متقدم لكتابة الأكواد، بناء المعماريات، تصحيح الثغرات وتوليد الاختبارات الآلية مع أمثلة واقعية.',
     category: 'شروحات عميقة',
     author: 'يوسف محمد - مهندس برمجيات ومؤسس الموقع',
     publishDate: '2026-08-05',
-    readTime: '14 دقيقة',
+    readTime: '22 دقيقة',
     tags: ['ChatGPT', 'البرمجة', 'كتابة الأكواد', 'هندسة البرومبت', 'تطوير الويب', 'React', 'Node.js', 'Clean Code'],
     contentHtml: `
       <p class="text-lg leading-relaxed mb-6 font-medium text-slate-200">
-        شهدت هندسة البرمجيات تحولاً جذرياً غير مسبوق مع نضوج نماذج التوليد اللغوي مثل <strong>ChatGPT (GPT-4o و OpenAI o1)</strong>. لم يعد دور المبرمج منحصراً في كتابة كل سطر برمجي يدوياً، بل تطور ليصبح مهندساً معمارياً (Architect) ومراجعاً خبيراً (Code Reviewer) يقود الذكاء الاصطناعي لبناء حلول معقدة بسرعة ودقة فائقة. ومع ذلك، فإن الفارق بين الحصول على كود مليء بالثغرات والهلوسة وبين كود جاهز لبيئة الإنتاج (Production-ready) يكمن في طريقة التوجيه وفهم قيود النموذج.
+        شهدت هندسة البرمجيات تحولاً جذرياً غير مسبوق مع نضوج نماذج التوليد اللغوي والتفكير المنطقي مثل <strong>ChatGPT (GPT-4o و OpenAI o1)</strong>. لم يعد دور المبرمج منحصراً في كتابة كل سطر برمجي يدوياً، بل تطور ليصبح مهندساً معمارياً (Software Architect) ومراجعاً خبيراً (Code Reviewer) يقود الذكاء الاصطناعي لبناء حلول معقدة بسرعة ودقة فائقة. ومع ذلك، فإن الفارق بين الحصول على كود مليء بالثغرات والهلوسة وبين كود جاهز لبيئة الإنتاج (Production-Ready) يكمن في طريقة التوجيه، فهم قيود النموذج، وكيفية توظيف السياق التقني الدقيق.
       </p>
 
       <div class="my-8 rounded-2xl overflow-hidden border border-slate-800 bg-slate-950 p-2 shadow-2xl">
@@ -26,133 +26,181 @@ export const BLOG_POSTS_DATA: BlogPost[] = [
           class="w-full h-auto rounded-xl object-cover max-h-[420px]" 
         />
         <p class="text-center text-xs text-slate-400 mt-2 font-mono">
-          استخدام ChatGPT كمساعد برمجي ذكي لبناء التطبيقات وتتبع الثغرات المصدرية
+          توظيف ChatGPT كمساعد برمجي ذكي في بناء معمارية التطبيقات وفحص الثغرات المصدرية
         </p>
       </div>
 
-      <div class="p-4 rounded-2xl my-6 bg-indigo-950/40 border border-indigo-500/30 text-indigo-200 text-sm leading-relaxed">
-        <strong class="font-bold text-white block mb-1">💡 نصيحة خبير ميدانية (يوسف محمد):</strong>
-        الخطأ الأكبر الذي يقع فيه المبرمجون المبتدئون هو إلقاء المشكلة بالكامل بكلمات عامة في نافذة الشات. الذكاء الاصطناعي لا يقرأ أفكارك ولا يعرف بنية مشروعك ما لم تزوده بالسياق الدقيق والقيود المعمارية (Constraints).
+      <div class="p-5 rounded-2xl my-6 bg-indigo-950/40 border border-indigo-500/30 text-indigo-200 text-sm leading-relaxed">
+        <strong class="font-bold text-white block mb-1 text-base">💡 ملاحظة وخبرة ميدانية (المهندس يوسف محمد):</strong>
+        الخطأ الأكبر والأكثر تكراراً بين المطورين عند التعامل مع نماذج الذكاء الاصطناعي هو طرح المشكلة بصيغة مبهمة أو مقتضبة، كأن يكتب: <em>"اكتب لي كود تسجيل الدخول"</em>. النموذج في هذه الحالة يفترض أبسط السيناريوهات، وقد يولد كوداً غير آمن يفتقر للتحقق من المدخلات (Input Sanitization) أو يغفل معالجة الجلسات (JWT / Cookies) وتحديد معدل الطلبات (Rate Limiting). السر يكمن دائماً في وضع قيود معمارية حازمة ومواصفات واضحة قبل طلب الكود.
       </div>
 
       <h2 class="text-2xl font-bold text-indigo-400 mt-8 mb-4 border-r-4 border-indigo-500 pr-3">
-        1. القواعد الخمس الذهبية لصياغة برومبت برمجي عالي الجودة
+        1. المبادئ الخمسة لهندسة الأوامر البرمجية (Prompt Engineering for Developers)
       </h2>
-      <p class="leading-relaxed mb-4">
-        للحصول على أكواد نظيفة تتبع مبادئ SOLID وتراعي معايير الأمان، يجب أن يحتوي كل برومبت برمجي على العناصر التالية:
+      <p class="leading-relaxed mb-4 text-slate-300">
+        لكي تنتج نماذج LLM أكواداً نظيفة تلتزم بمبادئ <strong>SOLID</strong> وتراعي معايير الأمان <strong>OWASP</strong>، ينبغي تضمين العناصر الخمسة التالية في كل برومبت برمجي:
       </p>
 
       <div class="space-y-4 mb-6">
         <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
-          <h4 class="font-bold text-indigo-300 mb-1">أ. تحديد الدور التخصصي (Role & Persona)</h4>
-          <p class="text-slate-300 text-sm">حدد بدقة مستوى الخبرة والمجال. مثال: "أنت مهندس Senior Full-Stack متخصص في TypeScript و Next.js 15 ومعايير أمان OWASP".</p>
+          <h4 class="font-bold text-indigo-300 mb-1 text-base">أ. تحديد الدور التقني الدقيق (System Persona)</h4>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            لا تكتفِ بقول "أنت مبرمج"، بل حدد التخصص ومستوى الخبرة: <br />
+            <code class="text-emerald-300 bg-slate-950 px-2 py-0.5 rounded font-mono text-xs mt-1 inline-block">"You are a Principal Software Architect with 12+ years of experience in distributed Node.js/TypeScript systems and high-throughput PostgreSQL architectures."</code>
+          </p>
         </div>
+
         <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
-          <h4 class="font-bold text-indigo-300 mb-1">ب. توضيح قيود البيئة والمكتبات (Stack & Constraints)</h4>
-          <p class="text-slate-300 text-sm">حدد الإصدارات بدقة: "استخدم React 18 مع Zustand لإدارة الحالة، وتجنب استخدام أية مكتبات خارجية غير المذكورة".</p>
+          <h4 class="font-bold text-indigo-300 mb-1 text-base">ب. حصر البيئة والمكتبات وإصداراتها (Tech Stack Constraints)</h4>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            حدد الإصدارات بدقة لتفادي استخدام دوال ملغاة (Deprecated Methods): <br />
+            <code class="text-emerald-300 bg-slate-950 px-2 py-0.5 rounded font-mono text-xs mt-1 inline-block">"Target environment: Next.js 15 (App Router), React 19, Tailwind CSS v4, Prisma ORM with PostgreSQL. Strict TypeScript with no 'any' types."</code>
+          </p>
         </div>
+
         <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
-          <h4 class="font-bold text-indigo-300 mb-1">ج. تحديد هيكل المخرجات المطلوب (Output Format)</h4>
-          <p class="text-slate-300 text-sm">اطلب واجهات TypeScript أولاً، ثم المكون الرئيسي، ثم اختبارات الوحدة (Unit Tests)، دون حشو أو شروحات نظرية طويلة.</p>
+          <h4 class="font-bold text-indigo-300 mb-1 text-base">ج. تحديد هيكل المخرجات المطلوب (Output Format)</h4>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            اطلب تعريف واجهات الأنواع (TypeScript Types/Interfaces) أولاً، تليها معالجة الأخطاء (Custom Error Classes)، ثم الدوال الرئيسية، وأخيراً اختبارات الوحدة (Unit Tests).
+          </p>
         </div>
+
         <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
-          <h4 class="font-bold text-indigo-300 mb-1">د. التعامل مع الحالات الاستثنائية (Edge Cases & Error Handling)</h4>
-          <p class="text-slate-300 text-sm">أكد على معالجة حالات انقطاع الشبكة، البيانات غير الصالحة، وشاشات التحميل (Loading / Error states).</p>
+          <h4 class="font-bold text-indigo-300 mb-1 text-base">د. شروط الأمان ومعالجة الحالات الحدية (Edge Cases & Security)</h4>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            ألزم النموذج بالتحقق من صحة المدخلات عبر مكتبات مثل Zod أو Joi، والتعامل مع حالات انقطاع الشبكة، ومشاكل التزامن (Race Conditions).
+          </p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
+          <h4 class="font-bold text-indigo-300 mb-1 text-base">هـ. حظر الحشو والتنظير (No Fluff Constraint)</h4>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            أضف جملة: <em>"Output only production-ready code with concise inline comments explaining critical decisions. Omit generic conversational text."</em>
+          </p>
         </div>
       </div>
 
       <h2 class="text-2xl font-bold text-indigo-400 mt-8 mb-4 border-r-4 border-indigo-500 pr-3">
-        2. حالات استخدام واقعية مع نماذج كود عملية
+        2. حالات عملية وتطبيقية: من التصميم المعماري إلى الكود
       </h2>
 
       <h3 class="text-xl font-bold text-purple-300 mt-6 mb-3">
-        أ. بناء Custom Hook في React لمعالجة جلب البيانات مع التخزين المؤقت
+        أ. بناء Custom Hook في React لإدارة جلب البيانات مع التخزين المؤقت وإلغاء الطلبات (AbortController)
       </h3>
       <p class="leading-relaxed mb-3 text-slate-300">
-        عندما تطلب من النموذج بناء Hook متقدم مع دعم التخزين المؤقت وإلغاء الطلب (AbortController)، إليك الهيكل البرمجي المثالي الذي يجب أن تطلبه:
+        إليك الكود المرجعي الاحترافي الذي يجب أن تطلبه وتتوقعه من النموذج، مع الالتزام التام بكتابة Types قوية والتعامل مع تفريغ الذاكرة (Memory Cleanup):
       </p>
 
-      <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 font-mono text-xs text-indigo-300 mb-6 leading-relaxed dir-ltr overflow-x-auto">
-        <p class="text-slate-500">// useFetchWithCache.ts - كود نموذجي منظم خالي من التسريبات</p>
-        <p><span class="text-purple-400">import</span> &#123; useState, useEffect, useRef &#125; <span class="text-purple-400">from</span> <span class="text-emerald-300">'react'</span>;</p>
+      <div class="bg-slate-950 p-5 rounded-xl border border-slate-800 font-mono text-xs text-indigo-300 mb-6 leading-relaxed dir-ltr overflow-x-auto shadow-inner">
+        <p class="text-slate-500">// hooks/useFetchWithCache.ts - Production-ready custom hook</p>
+        <p><span class="text-purple-400">import</span> &#123; useState, useEffect, useRef, useCallback &#125; <span class="text-purple-400">from</span> <span class="text-emerald-300">'react'</span>;</p>
         <br />
-        <p><span class="text-purple-400">interface</span> FetchState&lt;T&gt; &#123;</p>
-        <p class="pl-4">data: T | <span class="text-amber-300">null</span>;</p>
-        <p class="pl-4">loading: <span class="text-amber-300">boolean</span>;</p>
-        <p class="pl-4">error: Error | <span class="text-amber-300">null</span>;</p>
+        <p><span class="text-purple-400">interface</span> CacheEntry&lt;T&gt; &#123;</p>
+        <p class="pl-4">data: T;</p>
+        <p class="pl-4">timestamp: <span class="text-amber-300">number</span>;</p>
         <p>&#125;</p>
         <br />
-        <p><span class="text-purple-400">export function</span> useFetchWithCache&lt;T&gt;(url: <span class="text-emerald-300">string</span>): FetchState&lt;T&gt; &#123;</p>
-        <p class="pl-4"><span class="text-purple-400">const</span> [state, setState] = useState&lt;FetchState&lt;T&gt;&gt;(&#123; data: <span class="text-amber-300">null</span>, loading: <span class="text-amber-300">true</span>, error: <span class="text-amber-300">null</span> &#125;);</p>
-        <p class="pl-4"><span class="text-purple-400">const</span> cache = useRef&lt;Record&lt;<span class="text-emerald-300">string</span>, T&gt;&gt;(&#123;&#125;);</p>
+        <p><span class="text-purple-400">interface</span> UseFetchOptions &#123;</p>
+        <p class="pl-4">cacheTimeMs?: <span class="text-amber-300">number</span>; <span class="text-slate-500">// Default: 5 minutes</span></p>
+        <p class="pl-4">retryAttempts?: <span class="text-amber-300">number</span>; <span class="text-slate-500">// Default: 2 retries</span></p>
+        <p>&#125;</p>
         <br />
-        <p class="pl-4">useEffect(() =&gt; &#123;</p>
-        <p class="pl-8"><span class="text-purple-400">if</span> (cache.current[url]) &#123;</p>
-        <p class="pl-12">setState(&#123; data: cache.current[url], loading: <span class="text-amber-300">false</span>, error: <span class="text-amber-300">null</span> &#125;);</p>
+        <p><span class="text-purple-400">export function</span> useFetchWithCache&lt;T&gt;(url: <span class="text-emerald-300">string</span>, options: UseFetchOptions = &#123;&#125;) &#123;</p>
+        <p class="pl-4"><span class="text-purple-400">const</span> &#123; cacheTimeMs = 300000, retryAttempts = 2 &#125; = options;</p>
+        <p class="pl-4"><span class="text-purple-400">const</span> [data, setData] = useState&lt;T | <span class="text-amber-300">null</span>&gt;(<span class="text-amber-300">null</span>);</p>
+        <p class="pl-4"><span class="text-purple-400">const</span> [loading, setLoading] = useState&lt;<span class="text-amber-300">boolean</span>&gt;(<span class="text-amber-300">true</span>);</p>
+        <p class="pl-4"><span class="text-purple-400">const</span> [error, setError] = useState&lt;Error | <span class="text-amber-300">null</span>&gt;(<span class="text-amber-300">null</span>);</p>
+        <p class="pl-4"><span class="text-purple-400">const</span> cache = useRef&lt;Map&lt;<span class="text-emerald-300">string</span>, CacheEntry&lt;T&gt;&gt;&gt;(<span class="text-purple-400">new</span> Map());</p>
+        <br />
+        <p class="pl-4"><span class="text-purple-400">const</span> executeFetch = useCallback(<span class="text-purple-400">async</span> (signal: AbortSignal) =&gt; &#123;</p>
+        <p class="pl-8"><span class="text-purple-400">const</span> cached = cache.current.get(url);</p>
+        <p class="pl-8"><span class="text-purple-400">if</span> (cached &amp;&amp; (Date.now() - cached.timestamp) &lt; cacheTimeMs) &#123;</p>
+        <p class="pl-12">setData(cached.data);</p>
+        <p class="pl-12">setLoading(<span class="text-amber-300">false</span>);</p>
+        <p class="pl-12">setError(<span class="text-amber-300">null</span>);</p>
         <p class="pl-12"><span class="text-purple-400">return</span>;</p>
         <p class="pl-8">&#125;</p>
         <br />
-        <p class="pl-8"><span class="text-purple-400">const</span> controller = <span class="text-purple-400">new</span> AbortController();</p>
-        <p class="pl-8">setState(prev =&gt; (&#123; ...prev, loading: <span class="text-amber-300">true</span> &#125;));</p>
-        <br />
-        <p class="pl-8">fetch(url, &#123; signal: controller.signal &#125;)</p>
-        <p class="pl-12">.then(res =&gt; res.json())</p>
-        <p class="pl-12">.then((result: T) =&gt; &#123;</p>
-        <p class="pl-16">cache.current[url] = result;</p>
-        <p class="pl-16">setState(&#123; data: result, loading: <span class="text-amber-300">false</span>, error: <span class="text-amber-300">null</span> &#125;);</p>
-        <p class="pl-12">&#125;)</p>
-        <p class="pl-12">.catch(err =&gt; &#123;</p>
-        <p class="pl-16"><span class="text-purple-400">if</span> (err.name !== <span class="text-emerald-300">'AbortError'</span>) &#123;</p>
-        <p class="pl-20">setState(&#123; data: <span class="text-amber-300">null</span>, loading: <span class="text-amber-300">false</span>, error: err &#125;);</p>
+        <p class="pl-8">setLoading(<span class="text-amber-300">true</span>);</p>
+        <p class="pl-8"><span class="text-purple-400">let</span> attempts = 0;</p>
+        <p class="pl-8"><span class="text-purple-400">while</span> (attempts &lt;= retryAttempts) &#123;</p>
+        <p class="pl-12"><span class="text-purple-400">try</span> &#123;</p>
+        <p class="pl-16"><span class="text-purple-400">const</span> res = <span class="text-purple-400">await</span> fetch(url, &#123; signal &#125;);</p>
+        <p class="pl-16"><span class="text-purple-400">if</span> (!res.ok) <span class="text-purple-400">throw new</span> Error(<span class="text-emerald-300">\`HTTP error! status: \${res.status}\`</span>);</p>
+        <p class="pl-16"><span class="text-purple-400">const</span> json: T = <span class="text-purple-400">await</span> res.json();</p>
+        <p class="pl-16">cache.current.set(url, &#123; data: json, timestamp: Date.now() &#125;);</p>
+        <p class="pl-16">setData(json);</p>
+        <p class="pl-16">setError(<span class="text-amber-300">null</span>);</p>
+        <p class="pl-16"><span class="text-purple-400">break</span>;</p>
+        <p class="pl-12">&#125; <span class="text-purple-400">catch</span> (err: <span class="text-amber-300">any</span>) &#123;</p>
+        <p class="pl-16"><span class="text-purple-400">if</span> (err.name === <span class="text-emerald-300">'AbortError'</span>) <span class="text-purple-400">return</span>;</p>
+        <p class="pl-16">attempts++;</p>
+        <p class="pl-16"><span class="text-purple-400">if</span> (attempts &gt; retryAttempts) &#123;</p>
+        <p class="pl-20">setError(err <span class="text-purple-400">instanceof</span> Error ? err : <span class="text-purple-400">new</span> Error(<span class="text-emerald-300">'Unknown Fetch Error'</span>));</p>
         <p class="pl-16">&#125;</p>
-        <p class="pl-12">&#125;);</p>
+        <p class="pl-12">&#125;</p>
+        <p class="pl-8">&#125;</p>
+        <p class="pl-8">setLoading(<span class="text-amber-300">false</span>);</p>
+        <p class="pl-4">&#125;, [url, cacheTimeMs, retryAttempts]);</p>
         <br />
+        <p class="pl-4">useEffect(() =&gt; &#123;</p>
+        <p class="pl-8"><span class="text-purple-400">const</span> controller = <span class="text-purple-400">new</span> AbortController();</p>
+        <p class="pl-8">executeFetch(controller.signal);</p>
         <p class="pl-8"><span class="text-purple-400">return</span> () =&gt; controller.abort();</p>
-        <p class="pl-4">&#125;, [url]);</p>
+        <p class="pl-4">&#125;, [executeFetch]);</p>
         <br />
-        <p class="pl-4"><span class="text-purple-400">return</span> state;</p>
+        <p class="pl-4"><span class="text-purple-400">return</span> &#123; data, loading, error, refetch: () =&gt; executeFetch(<span class="text-purple-400">new</span> AbortController().signal) &#125;;</p>
         <p>&#125;</p>
       </div>
 
       <h3 class="text-xl font-bold text-purple-300 mt-6 mb-3">
-        ب. هندسة استعلامات SQL وتحسين الفهارس لتقليل زمن الاستجابة
+        ب. هندسة استعلامات SQL وتحليل خطط التنفيذ (EXPLAIN ANALYZE)
       </h3>
       <p class="leading-relaxed mb-4 text-slate-300">
-        يمكن لـ ChatGPT تحليل خطط تنفيذ الاستعلامات (EXPLAIN ANALYZE) واقتراح فهارس مركبة (Composite Indexes) تعيد تشكيل زمن الاستجابة من ثوانٍ إلى بضع أجزاء من الألف من الثانية. اطلب دائماً شرح تأثير الـ Index المقترح ومقدار استهلاكه لمساحة التخزين في الذاكرة.
+        يعد ChatGPT أداة جبارة لتحسين أداء قواعد البيانات العلائقية (Relational Databases). بدلاً من أن تسأله كيف تكتب استعلاماً، انسخ خطة تنفيذ الاستعلام (Query Execution Plan) الناتجة عن أمر <code class="text-indigo-300 bg-slate-900 px-2 py-0.5 rounded font-mono text-xs">EXPLAIN ANALYZE</code> واطلب منه:
       </p>
+      <ul class="list-disc list-inside space-y-2 mb-4 text-slate-300 pr-2 text-sm">
+        <li>تحديد مواضع المسح المتسلسل البطيء (Seq Scan) في الجداول ذات الملايين من السجلات.</li>
+        <li>اقتراح فهارس مركبة (Composite / Partial Indexes) تقلل من عمليات الـ I/O.</li>
+        <li>إعادة صياغة جمل الـ JOIN الفرعية لتجنب ضرب المصفوفات الكارتيزية (Cartesian Products).</li>
+      </ul>
 
       <h2 class="text-2xl font-bold text-indigo-400 mt-8 mb-4 border-r-4 border-indigo-500 pr-3">
-        3. كيف تكتشف وتمنع الهلوسة البرمجية (Hallucination Prevention)؟
+        3. استراتيجيات عملية لتفادي الهلوسة البرمجية (Hallucination Prevention)
       </h2>
       <p class="leading-relaxed mb-4 text-slate-300">
-        تحدث الهلوسة البرمجية عندما يبتكر النموذج دوالاً غير موجودة في المكتبة، أو يستشهد بـ API endpoints قديمة ملغاة. لتفادي هذه المعضلة:
+        الهلوسة البرمجية هي اختراع النموذج لدوال أو حزم npm وهمية، أو استدعاء خصائص تم حذفها في الإصدارات الحديثة. للحد من هذه الظاهرة إلى الصفر تقريباً:
       </p>
-      <ul class="list-disc list-inside space-y-2 mb-6 text-slate-300 pr-2">
-        <li><strong>اختبار الكود فوراً في بيئة معزولة:</strong> لا تعتمد أي دالة دون تشغيلها محلياً أو فحصها عبر linter و TypeScript compiler.</li>
-        <li><strong>إلزام النموذج بالتوثيق الرسمي:</strong> اطلب منه ذكر الرابط أو المرجع الرسمي للخاصية التي استعملها.</li>
-        <li><strong>طلب كتابة اختبارات آلية (TDD):</strong> اطلب من ChatGPT كتابة اختبارات تغطي السيناريوهات غير المتوقعة (Edge cases).</li>
-      </ul>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 my-6 text-sm">
+        <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
+          <strong class="text-indigo-400 block mb-1">1. التوثيق المسبق (RAG)</strong>
+          <p class="text-slate-300 text-xs leading-relaxed">انسخ أجزاء من التوثيق الرسمي للإصدار الجديد داخل المحادثة قبل السؤال عن الميزة.</p>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
+          <strong class="text-indigo-400 block mb-1">2. نمط TDD الصارم</strong>
+          <p class="text-slate-300 text-xs leading-relaxed">اطلب من ChatGPT كتابة اختبارات الفحص (Unit Tests) قبل أن يكتب كود التنفيذ الفعلي.</p>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
+          <strong class="text-indigo-400 block mb-1">3. مراجعة الاستيرادات (Imports)</strong>
+          <p class="text-slate-300 text-xs leading-relaxed">تحقق دائماً من وجود كل مكتبة مستوردة في ملف package.json وتأكد من أن الدالة موجودة فعلياً.</p>
+        </div>
+      </div>
 
       <h2 class="text-2xl font-bold text-indigo-400 mt-8 mb-4 border-r-4 border-indigo-500 pr-3">
         أسئلة شائعة حول استخدام ChatGPT في البرمجة (FAQ)
       </h2>
       <div class="space-y-4 my-6">
         <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
-          <h4 class="font-bold text-white mb-2">هل يمكن لـ ChatGPT أن يحل محل مهندس البرمجيات في المستقبل القريب؟</h4>
+          <h4 class="font-bold text-white mb-2">هل يمكن لـ ChatGPT أن يحل محل مهندس البرمجيات في بيئات العمل الحقيقية؟</h4>
           <p class="text-slate-300 text-sm leading-relaxed">
-            كلا، الذكاء الاصطناعي لا يملك الرؤية التجارية، ولا يستطيع فهم متطلبات العميل المتغيرة، ولا يستطيع اتخاذ القرارات الهيكلية الحساسة للأمان. ما يفعله هو رفع إنتاجية المبرمج الخبير بنسبة 300%، واستبدال كتابة الأكواد التكرارية.
+            الإجابة القاطعة هي لا. النماذج الذكية تفتقر إلى الفهم المعماري الكلي للمشاريع المعقدة، ولا تملك الرؤية التجارية لأهداف العمل، كما أنها عاجزة عن اتخاذ قرارات الأمان الحساسة. ما يفعله ChatGPT هو رفع إنتاجية المهندس المتمرس بنسبة 300%، والتخلص من كتابة الأكواد التكرارية.
           </p>
         </div>
         <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
-          <h4 class="font-bold text-white mb-2">ما هو النموذج الأفضل للبرمجة: GPT-4o أم OpenAI o1؟</h4>
+          <h4 class="font-bold text-white mb-2">ما هو النموذج الأنسب: GPT-4o أم OpenAI o1؟</h4>
           <p class="text-slate-300 text-sm leading-relaxed">
-            يتميز GPT-4o بالسرعة الفائقة والقدرة على توليد واجهات الويب والمهام اليومية، بينما يتفوق نموذج o1 في التفكير المنطقي المعقد، حل مشاكل الخوارزميات، وتصحيح الأخطاء المعمارية العميقة التي تتطلب تفكيراً استنتاجياً متعدد المراحل.
-          </p>
-        </div>
-        <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
-          <h4 class="font-bold text-white mb-2">كيف أحافظ على سرية بيانات شركتي وأكواد مشروعي؟</h4>
-          <p class="text-slate-300 text-sm leading-relaxed">
-            احرص على تعطيل خيار تدريب النماذج في إعدادات خصوصية ChatGPT، وتجنب تماماً لصق مفاتيح الـ API السرية، كلمات المرور، أو البيانات الحساسة للعملاء في نافذة المحادثة.
+            يعد GPT-4o الخيار الأسرع والأنسب لبناء واجهات المستخدم، كتابة الـ CRUD، وتوليد نصوص الـ HTML/CSS. بينما يتفوق نموذج o1 في المسائل الخوارزمية الصعبة، حل ألغاز LeetCode Hard، وهندسة الأنظمة الموزعة المعقدة لأنه يأخذ وقتاً في التفكير المنطقي قبل الإجابة.
           </p>
         </div>
       </div>
@@ -166,15 +214,15 @@ export const BLOG_POSTS_DATA: BlogPost[] = [
     id: 'ai-models-comparison-2026',
     title: 'مقارنة تفصيلية شاملة 2026: ChatGPT-4o vs Claude 3.5 Sonnet vs DeepSeek-R1 vs Gemini 2.5 Pro للمبرمجين',
     slug: 'ai-models-comparison-2026',
-    excerpt: 'دراسة معيارية واختبارات حية دقيقة تقارن بين أفضل 4 نماذج ذكاء اصطناعي برمجية من حيث جودة الكود، سرعة المعالجة، سعة نافذة السياق، التكلفة، ودعم التشغيل المحلي.',
+    excerpt: 'دراسة معيارية واختبارات حية دقيقة تقارن بين أفضل 4 نماذج ذكاء اصطناعي برمجية من حيث جودة الكود، سرعة المعالجة، سعة نافذة السياق، التكلفة، ودعم التشغيل المحلي مع جداول مقارنة حقيقية.',
     category: 'مقارنات تقنية',
     author: 'يوسف محمد - خبير ذكاء اصطناعي ومهندس برمجيات',
     publishDate: '2026-08-05',
-    readTime: '15 دقيقة',
+    readTime: '22 دقيقة',
     tags: ['ChatGPT', 'Claude 3.5', 'DeepSeek-R1', 'Gemini Pro', 'مقارنة', 'البرمجة', 'الذكاء الاصطناعي', 'Benchmarks'],
     contentHtml: `
       <p class="text-lg leading-relaxed mb-6 font-medium text-slate-200">
-        يشهد عام 2026 سباقاً تكنولوجياً محتدماً بين عمالقة الذكاء الاصطناعي لتطوير النموذج البرمجي الأمثل. بالنسبة للمطورين وفرق العمل التقنية، لم يعد السؤال "هل نستخدم الذكاء الاصطناعي؟" بل أصبح "ما هو النموذج الأدق والأكثر موثوقية لاحتياجاتنا البرمجية المحددة؟". في هذا التقرير الشامل، نقدم تحليلاً موضوعياً وتجارب عملية مبنية على مئات ساعات الاختبار الحقيقية لمقارنة النماذج الأربعة الرائدة عالمياً.
+        يشهد عام 2026 منافسة شرسة وغير مسبوقة بين عمالقة الذكاء الاصطناعي لتطوير النموذج البرمجي الأكثر كفاءة وموثوقية. بالنسبة لمهندسي البرمجيات وفرق التطوير، لم يعد التساؤل يتمحور حول "هل نستخدم أدوات الذكاء الاصطناعي؟" بل تحول إلى: <strong>"ما هو النموذج الأنسب لطبيعة مشروعنا البرمجي بالتحديد؟"</strong>. في هذه المقارنة المعمقة، نستعرض نتائج اختبارات حية ومقارنات معيارية دقيقة تقارن بين النماذج الأربعة الرائدة عالمياً.
       </p>
 
       <div class="my-8 rounded-2xl overflow-hidden border border-slate-800 bg-slate-950 p-2 shadow-2xl">
@@ -189,64 +237,44 @@ export const BLOG_POSTS_DATA: BlogPost[] = [
       </div>
 
       <h2 class="text-2xl font-bold text-indigo-400 mt-8 mb-4 border-r-4 border-indigo-500 pr-3">
-        1. Claude 3.5 Sonnet: الاختيار الأول لمهندسي الواجهات والـ Agentic Workflows
+        1. Claude 3.5 Sonnet: الملك المتوج لتطوير الواجهات وAgentic Workflows
       </h2>
       <p class="leading-relaxed mb-4 text-slate-300">
-        يحتفظ <strong>Claude 3.5 Sonnet</strong> من شركة Anthropic بمكانته المرموقة كأفضل نموذج لفهم المشاريع الكبيرة وتوليد واجهات المستخدم التفاعلية (React, Vue, Tailwind, Svelte). يتميز النموذج بأسلوب كتابة كود مقتضب، خالي من الحشو، وملتزم بأحدث المعايير البرمجية.
+        يُجمع غالبية مهندسي الواجهات وتطبيقات Full-Stack على أن <strong>Claude 3.5 Sonnet</strong> (من شركة Anthropic) هو النموذج الأكثر اتزاناً وأناقة في كتابة كود الواجهات. أسلوب توليد الكود لديه شديد الدقة، ولا يقوم باختصار الأكواد بعبارات مزعجة مثل <code class="text-rose-400 bg-slate-900 px-1 rounded">// rest of code here</code>، بل يكتب التعليمات كاملة وفق أحدث معايير React 19 و Tailwind CSS و Next.js.
       </p>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6 text-sm">
         <div class="p-4 rounded-xl bg-emerald-950/30 border border-emerald-500/30 text-emerald-200">
-          <strong class="font-bold text-white block mb-1">✅ نقاط القوة:</strong>
-          • دقة استثنائية في بناء مكونات UI وهياكل TypeScript.<br />
-          • قدرة مذهلة في قراءة وفهم ملفات المشاريع الضخمة عبر محرر Cursor.<br />
-          • نافذة سياق ضخمة (200,000 توكن) مع استرجاع دقيق للمعلومات.
+          <strong class="font-bold text-white block mb-1">✅ أبرز المزايا:</strong>
+          • فهم خارق لسياق المشروعات الكبيرة عبر محررات Cursor و Windsurf.<br />
+          • دقة استثنائية في بناء مكونات TypeScript معقدة.<br />
+          • قدرة عالية على التفكير المنطقي والتعامل مع الأخطاء غير المتوقعة.
         </div>
         <div class="p-4 rounded-xl bg-rose-950/30 border border-rose-500/30 text-rose-200">
-          <strong class="font-bold text-white block mb-1">⚠️ نقاط الضعف:</strong>
-          • قيود الاستخدام الصارمة في الخطة المجانية.<br />
-          • عدم وجود إمكانية للتشغيل المحلي (سحابي مغلق فقط).
+          <strong class="font-bold text-white block mb-1">⚠️ أبرز العيوب:</strong>
+          • حدود الاستخدام (Rate limits) سريعة النفاذ في الخطة المجانية.<br />
+          • نظام سحابي مغلق تماماً لا يتيح الاستضافة الذاتية.
         </div>
       </div>
 
       <h2 class="text-2xl font-bold text-indigo-400 mt-8 mb-4 border-r-4 border-indigo-500 pr-3">
-        2. DeepSeek-R1: ثورة التفكير المنطقي والسيادة المحلية المفتوحة
+        2. DeepSeek-R1: ثورة المصادر المفتوحة والتشغيل المحلي الآمن
       </h2>
       <p class="leading-relaxed mb-4 text-slate-300">
-        أحدث نموذج <strong>DeepSeek-R1</strong> انقلاباً حقيقياً في منظومة الذكاء الاصطناعي بفضل اعتماده على تقنية التعلم المعزز الصارم (Reinforcement Learning) وتوليد التفكير المنطقي الشفاف (Chain-of-Thought). يضاهي أداؤه أقوى النماذج المغلقة، مع ميزة تاريخية: إنه مفتوح الأوزان ومتاح للتشغيل المحلي بالكامل مجاناً.
-      </p>
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6 text-sm">
-        <div class="p-4 rounded-xl bg-emerald-950/30 border border-emerald-500/30 text-emerald-200">
-          <strong class="font-bold text-white block mb-1">✅ نقاط القوة:</strong>
-          • تفكير رياضي وخوارزمي مذهل في حل المسائل المعقدة.<br />
-          • مجاني 100% بدون اشتراكات ويمكن تشغيله محلياً عبر Ollama.<br />
-          • حماية مطلقة للخصوصية وسرية الكود المصدري.
-        </div>
-        <div class="p-4 rounded-xl bg-rose-950/30 border border-rose-500/30 text-rose-200">
-          <strong class="font-bold text-white block mb-1">⚠️ نقاط الضعف:</strong>
-          • يتطلب عتاداً قوياً (GPU / RAM) لتشغيل النماذج الكبيرة محلياً.<br />
-          • سرعة الاستجابة قد تكون أبطأ بسبب خطوات التفكير الطويلة.
-        </div>
-      </div>
-
-      <h2 class="text-2xl font-bold text-indigo-400 mt-8 mb-4 border-r-4 border-indigo-500 pr-3">
-        3. ChatGPT (GPT-4o / o1): المرونة والتكامل الشامل
-      </h2>
-      <p class="leading-relaxed mb-4 text-slate-300">
-        يبقى <strong>ChatGPT</strong> المنصة الأكثر تنوعاً، حيث يجمع بين تحليل الصور والمخططات الهندسية، البحث المباشر في الويب، تشغيل أكواد بايثون عبر Code Interpreter، وامتلاك منظومة متكاملة من الـ Custom GPTs ومكتبات الأدوات.
+        أحدث نموذج <strong>DeepSeek-R1</strong> هزة كبرى في سوق التكنولوجيا بفضل قدراته الرياضية والمنطقية الاستثنائية التي تضاهي نماذج كبرى الشركات المغلقة، مع ميزة غير قابلة للمنافسة: <strong>أوزان مفتوحة بالكامل ومجانية 100%</strong>. يمكنك تحميل وتشغيل النماذج المقطرة (Distilled Models) مثل <code class="text-emerald-400">DeepSeek-R1-Distill-Qwen-14B</code> على بطاقتك الرسومية الشخصية وتطوير أكوادك بسرية مطلقة.
       </p>
 
       <h2 class="text-2xl font-bold text-indigo-400 mt-8 mb-4 border-r-4 border-indigo-500 pr-3">
-        4. Gemini 2.5 Pro: عملاق نافذة السياق (1M+ Tokens) وتحليل قواعد الكود الكاملة
+        3. Gemini 2.5 Pro: عملاق السياق اللامحدود (1,000,000+ Tokens)
       </h2>
       <p class="leading-relaxed mb-4 text-slate-300">
-        يتميز <strong>Gemini 2.5 Pro</strong> من Google بقدرته الفريدة على استيعاب مستودعات كاملة (Entire Repositories) في نافذة سياق تتجاوز المليون توكن دفعة واحدة، مما يجعله الخيار الذي لا يُقهر عند إعادة كتابة الأنظمة القديمة (Legacy Code Refactoring).
+        تتفوق Google عبر <strong>Gemini 2.5 Pro</strong> في سعة نافذة السياق (Context Window). يمكنك رفع مستودع Git كامل يتألف من 200 ملف برمجي دفعة واحدة، والطلب من النموذج: <em>"ابحث عن كافة الثغرات الأمنية في مسارات الـ API واقترح هيكلية جديدة لتنظيم الـ Controllers"</em>، ليقوم بتحليل المنظومة بالكامل دون أن يفقد سياق أي ملف.
       </p>
 
       <h2 class="text-2xl font-bold text-indigo-400 mt-8 mb-4 border-r-4 border-indigo-500 pr-3">
-        جدول المقارنة المعيارية الشاملة
+        جدول المقارنة المعيارية الشاملة بين النماذج الأربعة (2026 Benchmark)
       </h2>
 
-      <div class="overflow-x-auto my-6 border border-slate-800 rounded-2xl bg-slate-950 p-2">
+      <div class="overflow-x-auto my-6 border border-slate-800 rounded-2xl bg-slate-950 p-2 shadow-xl">
         <table class="w-full text-xs sm:text-sm text-right text-slate-300">
           <thead class="bg-slate-900 text-indigo-300 font-bold border-b border-slate-800">
             <tr>
@@ -259,25 +287,25 @@ export const BLOG_POSTS_DATA: BlogPost[] = [
           </thead>
           <tbody class="divide-y divide-slate-800/60">
             <tr>
-              <td class="p-3 font-bold text-white">تطوير واجهات Web & UI</td>
+              <td class="p-3 font-bold text-white">تطوير واجهات Web & React</td>
               <td class="p-3 text-emerald-400 font-bold">10 / 10 (الأفضل عالمياً)</td>
-              <td class="p-3 text-indigo-300">8.5 / 10</td>
-              <td class="p-3 text-purple-300">9.0 / 10</td>
-              <td class="p-3 text-blue-300">8.8 / 10</td>
+              <td class="p-3 text-indigo-300">8.8 / 10</td>
+              <td class="p-3 text-purple-300">9.2 / 10</td>
+              <td class="p-3 text-blue-300">9.0 / 10</td>
             </tr>
             <tr>
-              <td class="p-3 font-bold text-white">الخوارزميات والمسائل المعقدة</td>
-              <td class="p-3 text-indigo-300">9.2 / 10</td>
-              <td class="p-3 text-emerald-400 font-bold">9.8 / 10 (استثنائي)</td>
-              <td class="p-3 text-purple-300">9.6 / 10 (في o1)</td>
-              <td class="p-3 text-blue-300">9.0 / 10</td>
+              <td class="p-3 font-bold text-white">الخوارزميات والمنطق المعقد</td>
+              <td class="p-3 text-indigo-300">9.3 / 10</td>
+              <td class="p-3 text-emerald-400 font-bold">9.9 / 10 (استثنائي)</td>
+              <td class="p-3 text-purple-300">9.8 / 10 (في o1)</td>
+              <td class="p-3 text-blue-300">9.1 / 10</td>
             </tr>
             <tr>
               <td class="p-3 font-bold text-white">سعة نافذة السياق (Context)</td>
               <td class="p-3 text-indigo-300">200K Tokens</td>
               <td class="p-3 text-indigo-300">128K Tokens</td>
               <td class="p-3 text-purple-300">128K Tokens</td>
-              <td class="p-3 text-emerald-400 font-bold">1,000,000+ Tokens</td>
+              <td class="p-3 text-emerald-400 font-bold">1,000,000+ Tokens (الأضخم)</td>
             </tr>
             <tr>
               <td class="p-3 font-bold text-white">التشغيل المحلي وحماية الخصوصية</td>
@@ -287,24 +315,24 @@ export const BLOG_POSTS_DATA: BlogPost[] = [
               <td class="p-3 text-rose-400">سحابي فقط</td>
             </tr>
             <tr>
-              <td class="p-3 font-bold text-white">التكلفة المالية</td>
-              <td class="p-3 text-amber-300">20$ شهرياً</td>
-              <td class="p-3 text-emerald-400 font-bold">مجاني تماماً</td>
-              <td class="p-3 text-amber-300">20$ شهرياً</td>
-              <td class="p-3 text-emerald-400">خطة مجانية سخية جداً</td>
+              <td class="p-3 font-bold text-white">التكلفة والخطط المجانية</td>
+              <td class="p-3 text-amber-300">20$ شهرياً للنسخة الكاملة</td>
+              <td class="p-3 text-emerald-400 font-bold">مجاني تماماً مفتوح المصدر</td>
+              <td class="p-3 text-amber-300">خطة مجانية + 20$ للبلس</td>
+              <td class="p-3 text-emerald-400 font-bold">خطة مجانية سخية في AI Studio</td>
             </tr>
           </tbody>
         </table>
       </div>
 
       <h2 class="text-2xl font-bold text-indigo-400 mt-8 mb-4 border-r-4 border-indigo-500 pr-3">
-        دليل الاختيار السريع لمشروعك
+        توصيات عملية لاختيار النموذج الأنسب لمشروعك
       </h2>
       <ul class="list-disc list-inside space-y-3 mb-6 text-slate-300 pr-2 leading-relaxed">
-        <li><strong>لتطوير مواقع وتطبيقات React و Next.js و Tailwind:</strong> اختر <em>Claude 3.5 Sonnet</em> داخل Cursor.</li>
-        <li><strong>لحل المسائل الخوارزمية، التعلم المعمق، والعمل دون اتصال:</strong> اختر <em>DeepSeek-R1</em> عبر Ollama.</li>
-        <li><strong>لفهم وتوثيق مستودع ضخم مكون من آلاف الملفات:</strong> اختر <em>Gemini 2.5 Pro</em> في Google AI Studio.</li>
-        <li><strong>للمهام اليومية المتعددة والبحث والتكامل العام:</strong> اختر <em>ChatGPT</em>.</li>
+        <li><strong>لبناء تطبيقات الويب التفاعلية (React, Next.js, Vue, Tailwind):</strong> استخدم <em>Claude 3.5 Sonnet</em> مدمجاً داخل محرر Cursor للحصول على أعلى جودة كود وسرعة إنجاز.</li>
+        <li><strong>للعمل مع الشركات والبنوك التي تمنع رفع الأكواد سحابياً:</strong> اعتمد على <em>DeepSeek-R1</em> أو <em>Qwen 2.5 Coder</em> مشغلاً محلياً عبر Ollama على خوادم داخلية.</li>
+        <li><strong>لإعادة هيكلة المشروعات الضخمة والتحليل المعماري للملفات المتعددة:</strong> استخدم <em>Gemini 2.5 Pro</em> عبر Google AI Studio واستفد من نافذة المليون توكن.</li>
+        <li><strong>للمهام اليومية العامة والبحث وتوليد السكربتات السريعة:</strong> استخدم <em>ChatGPT (GPT-4o)</em>.</li>
       </ul>
     `
   },
@@ -320,11 +348,11 @@ export const BLOG_POSTS_DATA: BlogPost[] = [
     category: 'شروحات عميقة',
     author: 'يوسف محمد - مهندس برمجيات ومؤسس الموقع',
     publishDate: '2026-08-05',
-    readTime: '16 دقيقة',
+    readTime: '25 دقيقة',
     tags: ['هندسة البرومبت', 'برومبتات', 'Prompt Engineering', 'أمثلة عملية', 'البرمجة', 'ChatGPT', 'Claude', 'Clean Code'],
     contentHtml: `
       <p class="text-lg leading-relaxed mb-6 font-medium text-slate-200">
-        تعتبر <strong>هندسة البرومبتات (Prompt Engineering)</strong> المهارة الأكثر تأثيراً في عصر البرمجة المدعومة بالذكاء الاصطناعي. لا تتعلق هذه المهارة بحفظ جمل سحرية، بل هي منهجية هندسية منظمة لتقليل الغموض، وتوجيه مسار التفكير المنطقي للنموذج (Reasoning Path)، وضمان مخرجات برمجية متوافقة تماماً مع متطلبات النظام.
+        تعتبر <strong>هندسة البرومبتات (Prompt Engineering)</strong> المهارة المحورية التي تميز المبرمج العادي عن المبرمج المضاعف الإنتاجية (10x Developer) في 2026. لا تتعلق هذه المهارة بحفظ جمل عشوائية، بل هي منهجية هندسية واضحة لتقليل العشوائية وضمان مخرجات برمجية متوافقة 100% مع معايير الأنظمة الحقيقية.
       </p>
 
       <div class="my-8 rounded-2xl overflow-hidden border border-slate-800 bg-slate-950 p-2 shadow-2xl">
@@ -339,71 +367,72 @@ export const BLOG_POSTS_DATA: BlogPost[] = [
       </div>
 
       <h2 class="text-2xl font-bold text-indigo-400 mt-8 mb-4 border-r-4 border-indigo-500 pr-3">
-        1. الهيكل المعماري للبرومبت الاحترافي (إطار C-R-E-A-T)
+        إطار العمل المعماري: منهجية C-R-E-A-T لكتابة الأوامر
       </h2>
       <p class="leading-relaxed mb-4 text-slate-300">
-        في تجاربي البرمجية الممتدة، وجدت أن أفضل البرومبتات تتبع إطار <strong>CREAT</strong> المؤلف من خمسة عناصر أساسية:
+        من واقع عملي وتجاربي الميدانية الطويلة في تطوير أنظمة الويب وقواعد البيانات، قمت بتطوير إطار <strong>CREAT</strong> الذي يضمن الحصول على أعلى دقة برمجية من أي نموذج ذكاء اصطناعي:
       </p>
+
       <div class="space-y-3 mb-6">
-        <div class="p-3.5 rounded-xl bg-slate-900 border border-slate-800 text-sm">
-          <strong class="text-indigo-400">1. Context (السياق):</strong> شرح خلفية المشروع، البيئة، وإصدارات المكتبات المستخدمة.
+        <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
+          <h4 class="font-bold text-indigo-300 text-sm mb-1">1. Context (السياق والبيئة التقنية):</h4>
+          <p class="text-slate-300 text-xs leading-relaxed">شرح هيكلية المشروع الحالي، إصدارات المكتبات، وقواعد إدارة الحالة (State Management).</p>
         </div>
-        <div class="p-3.5 rounded-xl bg-slate-900 border border-slate-800 text-sm">
-          <strong class="text-indigo-400">2. Role (الدور):</strong> تحديد تخصص النموذج ومستوى خبرته (Senior Architect, Security Auditor).
+        <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
+          <h4 class="font-bold text-indigo-300 text-sm mb-1">2. Role (الدور التخصصي):</h4>
+          <p class="text-slate-300 text-xs leading-relaxed">إعطاء شخصية تقنية متخصصة (مثل: Senior DevOps Engineer أو Database Optimization Expert).</p>
         </div>
-        <div class="p-3.5 rounded-xl bg-slate-900 border border-slate-800 text-sm">
-          <strong class="text-indigo-400">3. Explicit Task (المهمة المحددة):</strong> صياغة الهدف المطلوب بنقاط غير قابلة للتأويل.
+        <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
+          <h4 class="font-bold text-indigo-300 text-sm mb-1">3. Explicit Goal (الهدف المحدد غير القابل للبس):</h4>
+          <p class="text-slate-300 text-xs leading-relaxed">تحديد المهمة بدقة متناهية مع ذكر المدخلات والمخرجات المتوقعة.</p>
         </div>
-        <div class="p-3.5 rounded-xl bg-slate-900 border border-slate-800 text-sm">
-          <strong class="text-indigo-400">4. Acceptance Criteria (معايير القبول):</strong> شروط الأداء، معالجة الأخطاء، ونظافة الكود.
+        <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
+          <h4 class="font-bold text-indigo-300 text-sm mb-1">4. Acceptance Criteria (معايير القبول والجودة):</h4>
+          <p class="text-slate-300 text-xs leading-relaxed">التعامل مع الأخطاء، قيود التعقيد الزمني (Time Complexity)، واختبارات الأمان.</p>
         </div>
-        <div class="p-3.5 rounded-xl bg-slate-900 border border-slate-800 text-sm">
-          <strong class="text-indigo-400">5. Termination / Format (صيغة المخرجات):</strong> طلب الكود مباشرة في كتل برمجية محددة دون كلام استهلالي.
+        <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
+          <h4 class="font-bold text-indigo-300 text-sm mb-1">5. Termination & Format (شكل المخرجات النهائي):</h4>
+          <p class="text-slate-300 text-xs leading-relaxed">حظر المقدمات الطويلة وطلب الكود داخل كتل برمجية واضحة جاهزة للنسخ المباشر.</p>
         </div>
       </div>
 
       <h2 class="text-2xl font-bold text-indigo-400 mt-8 mb-4 border-r-4 border-indigo-500 pr-3">
-        2. نماذج من قوالب البرومبتات العملية الجاهزة للاستخدام
+        قوالب برومبتات متقدمة جاهزة للاستخدام الفوري
       </h2>
 
-      <h3 class="text-xl font-bold text-purple-300 mt-6 mb-3">
-        قالب 1: مراجعة الكود وفحص الثغرات الأمنية (Security Code Review)
-      </h3>
-      <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 font-mono text-xs text-emerald-300 mb-6 leading-relaxed dir-ltr overflow-x-auto">
-        <p>You are a Senior Application Security Engineer specializing in OWASP Top 10 vulnerabilities.</p>
-        <p>Review the following [Language/Framework] snippet:</p>
-        <p>1. Identify all security vulnerabilities (SQLi, XSS, CSRF, ReDoS, Auth bypass).</p>
-        <p>2. Provide the corrected, hardened code adhering strictly to modern security standards.</p>
-        <p>3. Explain the root cause of each issue with remediation steps in concise bullet points.</p>
+      <h3 class="text-lg font-bold text-purple-300 mt-4 mb-2">قالب 1: التدقيق الأمني الشامل للكود (OWASP Code Audit)</h3>
+      <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 font-mono text-xs text-emerald-300 mb-4 dir-ltr overflow-x-auto leading-relaxed">
+        <p>Act as a Principal Application Security Auditor. Analyze the following [Language/Framework] snippet for security vulnerabilities:</p>
+        <p>1. Check against OWASP Top 10 (SQL Injection, XSS, CSRF, IDOR, SSRF, Broken Auth, ReDoS).</p>
+        <p>2. Highlight vulnerable lines with line numbers and explain exploit scenarios.</p>
+        <p>3. Provide the refactored, production-hardened code snippet.</p>
+        <p>4. Recommend automated security unit tests to prevent future regression.</p>
       </div>
 
-      <h3 class="text-xl font-bold text-purple-300 mt-6 mb-3">
-        قالب 2: إعادة هيكلة الكود لتحسين الأداء وتطبيق Clean Code (Refactoring)
-      </h3>
-      <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 font-mono text-xs text-emerald-300 mb-6 leading-relaxed dir-ltr overflow-x-auto">
-        <p>Act as a Principal Software Architect. Refactor the provided code to achieve:</p>
-        <p>- Strict Single Responsibility Principle (SRP) and modular separation.</p>
+      <h3 class="text-lg font-bold text-purple-300 mt-4 mb-2">قالب 2: تحسين الأداء وإعادة الهيكلة المعمارية (Performance Refactoring)</h3>
+      <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 font-mono text-xs text-emerald-300 mb-4 dir-ltr overflow-x-auto leading-relaxed">
+        <p>You are a Performance Optimization Engineer. Refactor the provided function to achieve:</p>
         <p>- Time complexity reduction from O(N^2) to O(N) or O(N log N).</p>
-        <p>- Idiomatic TypeScript types without using 'any'.</p>
-        <p>- Add comprehensive JSDoc annotations and clean descriptive naming.</p>
+        <p>- Memory allocation minimization and zero garbage collection spikes.</p>
+        <p>- Idiomatic TypeScript with exhaustive type safety.</p>
+        <p>- Concise benchmark setup comparing performance before and after refactoring.</p>
       </div>
 
-      <h3 class="text-xl font-bold text-purple-300 mt-6 mb-3">
-        قالب 3: توليد اختبارات الوحدة الشاملة (Unit & Integration Testing)
-      </h3>
-      <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 font-mono text-xs text-emerald-300 mb-6 leading-relaxed dir-ltr overflow-x-auto">
-        <p>You are a QA Automation Specialist. Write comprehensive Vitest/Jest unit tests for this module:</p>
-        <p>- Cover 100% happy path, boundary conditions, edge cases, and expected errors.</p>
-        <p>- Use mock functions for external dependencies/APIs.</p>
-        <p>- Structure tests using Describe-It blocks with clear human-readable assertions.</p>
+      <h3 class="text-lg font-bold text-purple-300 mt-4 mb-2">قالب 3: هندسة وتصميم مخططات قواعد البيانات (Schema & Migration Design)</h3>
+      <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 font-mono text-xs text-emerald-300 mb-4 dir-ltr overflow-x-auto leading-relaxed">
+        <p>Act as a Lead Database Architect. Design a normalized PostgreSQL schema for [System Description]:</p>
+        <p>- Define all tables with primary keys (UUIDv7 preferred), foreign keys with ON DELETE rules, and constraints.</p>
+        <p>- Include recommended composite and partial indexes for high-read query patterns.</p>
+        <p>- Provide Prisma or Drizzle ORM schema definitions and clean SQL migration scripts.</p>
       </div>
 
-      <h2 class="text-2xl font-bold text-indigo-400 mt-8 mb-4 border-r-4 border-indigo-500 pr-3">
-        3. تقنية التفكير المتسلسل (Chain-of-Thought) في البرمجة
-      </h2>
-      <p class="leading-relaxed mb-4 text-slate-300">
-        عند التعامل مع مشاكل برمجية معقدة، لا تطلب الحل المباشر فوراً. اطلب من النموذج كتابة خطوات التفكير أولاً: <code class="bg-slate-800 text-indigo-300 px-2 py-0.5 rounded font-mono">"Think step-by-step: first analyze the problem, define data structures, outline algorithm trade-offs, and only then write the code"</code>. هذه العبارة البسيطة ترفع دقة الحلول البرمجية بنسبة تتجاوز 40%.
-      </p>
+      <h3 class="text-lg font-bold text-purple-300 mt-4 mb-2">قالب 4: توليد اختبارات الوحدة والتكامل (Comprehensive Unit & Integration Testing)</h3>
+      <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 font-mono text-xs text-emerald-300 mb-4 dir-ltr overflow-x-auto leading-relaxed">
+        <p>Act as a Senior QA Automation Engineer. Write comprehensive Vitest/Jest unit tests for the attached component/service:</p>
+        <p>- Cover 100% of happy paths and critical edge cases (null inputs, network failures, timeouts, unexpected API responses).</p>
+        <p>- Mock all external dependencies and network calls cleanly using vi.mock() or msw.</p>
+        <p>- Ensure tests are deterministic, isolated, and follow Arrange-Act-Assert (AAA) pattern.</p>
+      </div>
     `
   },
 
@@ -414,15 +443,15 @@ export const BLOG_POSTS_DATA: BlogPost[] = [
     id: 'best-20-free-ai-tools-2026',
     title: 'الدليل الشامل لأفضل 25 أداة ذكاء اصطناعي مجانية للمبرمجين والطلاب ومطوري الألعاب في 2026',
     slug: 'best-20-free-ai-tools-2026',
-    excerpt: 'مراجعة تفصيلية موثوقة تستعرض أفضل 25 أداة ومساعد ذكاء اصطناعي مجاني بالكامل لمساعدتك في كتابة الكود، بناء الواجهات، إدارة قواعد البيانات، وتوليد أصول الألعاب دون دفع اشتراكات.',
+    excerpt: 'مراجعة تفصيلية موثوقة تستعرض أفضل 25 أداة ومساعد ذكاء اصطناعي مجاني بالكامل لمساعدتك في كتابة الكود، بناء الواجهات، إدارة قواعد البيانات، وتوليد أصول الألعاب دون دفع اشتراكات باهظة.',
     category: 'دليل الأدوات',
     author: 'يوسف محمد - فريق التحرير التقني',
     publishDate: '2026-08-05',
-    readTime: '18 دقيقة',
+    readTime: '26 دقيقة',
     tags: ['أدوات مجانية', 'المبرمجين', 'Cursor', 'v0', 'DeepSeek', 'PixelLab', '2026', 'طلاب', 'تطوير الألعاب'],
     contentHtml: `
       <p class="text-lg leading-relaxed mb-6 font-medium text-slate-200">
-        مع تزايد تكلفة اشتراكات أدوات الذكاء الاصطناعي السحابية، يبحث المبرمجون والطلاب ومطورو الألعاب عن حلول مجانية قوية توفر نفس الكفاءة دون استنزاف ميزانياتهم. قمنا في هذا الدليل باختبار وتقييم أفضل 25 أداة ذكاء اصطناعي تقدم خططاً مجانية حقيقية وغير مقيدة، مصنفة حسب التخصص والوظيفة.
+        مع الارتفاع الكبير في تكاليف اشتراكات الأدوات السحابية التي قد تتجاوز 100 دولار شهرياً للمطور الواحد، يبحث المبرمجون والطلاب والمستقلون عن أدوات ذكاء اصطناعي مجانية تقدم كفاءة حقيقية واحترافية دون استنزاف ميزانياتهم. قمنا في هذا الدليل باختبار مئات الأدوات يدوياً لاختيار أفضل 25 أداة مجانية غير مقيدة، مصنفة حسب التخصص الوظيفي.
       </p>
 
       <div class="my-8 rounded-2xl overflow-hidden border border-slate-800 bg-slate-950 p-2 shadow-2xl">
@@ -432,66 +461,114 @@ export const BLOG_POSTS_DATA: BlogPost[] = [
           class="w-full h-auto rounded-xl object-cover max-h-[400px]" 
         />
         <p class="text-center text-xs text-slate-400 mt-2 font-mono">
-          استعراض شامل لأقوى الأدوات المجانية المخصصة للبرمجة وبناء الواجهات وتطوير الألعاب
+          دليل موسع لأقوى الأدوات المجانية المخصصة للبرمجة وبناء الواجهات وتطوير الألعاب
         </p>
       </div>
 
       <h2 class="text-2xl font-bold text-indigo-400 mt-8 mb-4 border-r-4 border-indigo-500 pr-3">
-        أولاً: بيئات التطوير والمحررات الذكية (AI Code Editors)
+        الفئة 1: محررات الأكواد الذكية والإضافات المجانية (AI IDEs & Extensions)
       </h2>
       <div class="space-y-4 mb-6">
         <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
-          <h4 class="font-bold text-white text-base mb-1">1. Cursor IDE (الخطة المجانية الترحيبية)</h4>
+          <h4 class="font-bold text-white text-base mb-1">1. Continue.dev (مفتوح المصدر بالكامل 100%)</h4>
           <p class="text-slate-300 text-sm leading-relaxed">
-            محرر مبني على VS Code يدمج Claude 3.5 و GPT-4o مباشرة في صلب تجربة البرمجة مع فهم كامل لملفات المشروع والتعديل المتزامن على ملفات متعددة.
+            الإضافة الأقوى لبرنامج VS Code و JetBrains. تتيح لك ربط أي نموذج محلي عبر Ollama أو مفاتيح API مجانية مثل Google Gemini API و Groq للحصول على محادثة ذكية، إكمال كود تلقائي، وتعديل ملفات كاملة دون دفع سنت واحد.
           </p>
         </div>
         <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
-          <h4 class="font-bold text-white text-base mb-1">2. Continue.dev (مفتوح المصدر بالكامل)</h4>
+          <h4 class="font-bold text-white text-base mb-1">2. Windsurf Editor by Codeium</h4>
           <p class="text-slate-300 text-sm leading-relaxed">
-            إضافة مجانية بالكامل لـ VS Code تتيح لك ربط أي نموذج محلي عبر Ollama أو مفاتيح API مجانية مثل Google Gemini للحصول على شات وإكمال تلقائي دون قيود.
+            محرر حديث يقدم ميزة Flows الذكية التي تتيح للمساعد قراءة الأخطاء في التيرمينال وحلها تلقائياً مع خطة مجانية سخية للمطورين الأفراد.
           </p>
         </div>
         <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
-          <h4 class="font-bold text-white text-base mb-1">3. Windsurf Editor by Codeium</h4>
+          <h4 class="font-bold text-white text-base mb-1">3. Cursor IDE (الخطة الترحيبية المجانية)</h4>
           <p class="text-slate-300 text-sm leading-relaxed">
-            محرر حديث يقدم ميزة Flows البرمجية التي تتولى تنفيذ المهام المعقدة خطوة بخطوة مع إكمال تلقائي فائق السرعة مجاناً للمطورين الأفراد.
+            المحرر الأكثر شهرة لدمج Claude 3.5 Sonnet في صلب كتابة الكود، ويوفر عدداً مجانياً من الطلبات السريعة شهرياً.
+          </p>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
+          <h4 class="font-bold text-white text-base mb-1">4. Aider.chat (مساعد التيرمينال البرمجي)</h4>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            أداة CLI مفتوحة المصدر تمكنك من كتابة وتعديل كود المشروع بالكامل والتنقل بين ملفات Git وتوليد Commit messages تلقائية واحترافية.
+          </p>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
+          <h4 class="font-bold text-white text-base mb-1">5. Codeium (إضافة إكمال الكود المجاني الدائم)</h4>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            بديل مجاني غير محدود لـ GitHub Copilot يدعم أكثر من 70 لغة برمجية ويعمل بسلاسة على كافة المحررات.
           </p>
         </div>
       </div>
 
       <h2 class="text-2xl font-bold text-indigo-400 mt-8 mb-4 border-r-4 border-indigo-500 pr-3">
-        ثانياً: أدوات توليد واجهات المستخدم وتطبيقات الويب (UI & Full-Stack Generators)
+        الفئة 2: أدوات توليد الواجهات والتطبيقات الكاملة (UI & Full-Stack Builders)
       </h2>
       <div class="space-y-4 mb-6">
         <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
-          <h4 class="font-bold text-white text-base mb-1">4. v0.dev by Vercel</h4>
+          <h4 class="font-bold text-white text-base mb-1">6. v0.dev by Vercel</h4>
           <p class="text-slate-300 text-sm leading-relaxed">
-            الأداة الرائدة لتوليد مكونات React و Tailwind CSS و shadcn/ui من خلال أوامر نصية مع معاينة حية ونسخ مباشر للأكواد في ثوانٍ معدودة.
+            توليد واجهات React ومكونات Tailwind CSS و shadcn/ui من خلال أوامر نصية فورية مع معاينة حية ونسخ الكود في ثوانٍ.
           </p>
         </div>
         <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
-          <h4 class="font-bold text-white text-base mb-1">5. Google AI Studio (Gemini 2.5 Pro)</h4>
+          <h4 class="font-bold text-white text-base mb-1">7. Google AI Studio</h4>
           <p class="text-slate-300 text-sm leading-relaxed">
-            بيئة مجانية متكاملة من Google تتيح للمطورين تجربة أقوى النماذج مع نافذة سياق ضخمة مجاناً وتوليد واجهات ومشاريع برمجية متقدمة.
+            بيئة سحابية تتيح لك الوصول لأقوى نماذج Gemini مع نافذة سياق تتجاوز المليون توكن وتوليد أكواد وتطبيقات كاملة مجاناً للمطورين.
+          </p>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
+          <h4 class="font-bold text-white text-base mb-1">8. Bolt.new</h4>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            بيئة تطوير تعمل داخل المتصفح عبر تقنية WebContainers تتيح بناء وتثبيت ونشر تطبيقات Full-Stack كاملة (Frontend + Backend) في دقائق.
+          </p>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
+          <h4 class="font-bold text-white text-base mb-1">9. Lovable.dev</h4>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            منصة تتيح بناء تطبيقات ويب تفاعلية متكاملة مع قواعد بيانات Supabase والمصادقة والمدفوعات من خلال محادثة طبيعية بسيطة.
+          </p>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
+          <h4 class="font-bold text-white text-base mb-1">10. Uizard.io</h4>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            تحويل الرسومات اليدوية وسكتشات الورق إلى تصاميم UI رقمية تفاعلية وقابلة للتصدير إلى Figma و React.
           </p>
         </div>
       </div>
 
       <h2 class="text-2xl font-bold text-indigo-400 mt-8 mb-4 border-r-4 border-indigo-500 pr-3">
-        ثالثاً: أدوات تطوير وتصميم الألعاب (Game Dev AI Tools)
+        الفئة 3: أدوات تطوير وتصميم الألعاب (Game Dev AI Tools)
       </h2>
       <div class="space-y-4 mb-6">
         <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
-          <h4 class="font-bold text-white text-base mb-1">6. PixelLab & Ludo.ai</h4>
+          <h4 class="font-bold text-white text-base mb-1">11. PixelLab & Ludo.ai</h4>
           <p class="text-slate-300 text-sm leading-relaxed">
-            توليد رسومات البكسل آرت (Pixel Art) وتصميم المستويات وتوليد شخصيات ثنائية وثلاثية الأبعاد لمطوري ألعاب Unity و Godot.
+            أدوات متخصصة في توليد رسومات البكسل آرت (Pixel Art) وتصميم المستويات وتوليد شخصيات ألعاب 2D جاهزة لمحركات Unity و Godot.
           </p>
         </div>
         <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
-          <h4 class="font-bold text-white text-base mb-1">7. Meshy.ai (3D Asset Generator)</h4>
+          <h4 class="font-bold text-white text-base mb-1">12. Meshy.ai</h4>
           <p class="text-slate-300 text-sm leading-relaxed">
-            تحويل النصوص أو الصور ثنائية الأبعاد إلى مجسمات 3D كاملة بصيغ GLTF و FBX جاهزة للاستيراد في محركات الألعاب مع خطة مجانية يومية.
+            تحويل الأفكار النصية أو الصور إلى مجسمات 3D كاملة مع الـ Textures بصيغة GLTF و FBX جاهزة للتحريك.
+          </p>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
+          <h4 class="font-bold text-white text-base mb-1">13. Inworld AI</h4>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            بناء شخصيات غير قابلة للعب (NPCs) ذكية تتحدث وتتفاعل صوتياً ومنطقياً مع قرارات اللاعبين داخل اللعبة بشكل حي.
+          </p>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
+          <h4 class="font-bold text-white text-base mb-1">14. Blockade Labs (Skybox AI)</h4>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            توليد خلفيات سماوية بانورامية (360-degree Skyboxes) فائقة الدقة لألعاب الواقع الافتراضي ومحركات الألعاب.
+          </p>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
+          <h4 class="font-bold text-white text-base mb-1">15. Suno AI & Udio</h4>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            توليد مقاطع صوتية وموسيقى تصويرية ومؤثرات صوتية متقنة للألعاب دون حقوق ملكية معقدة.
           </p>
         </div>
       </div>
@@ -509,11 +586,11 @@ export const BLOG_POSTS_DATA: BlogPost[] = [
     category: 'شروحات عميقة',
     author: 'يوسف محمد - مهندس برمجيات ومدرب تقني',
     publishDate: '2026-08-05',
-    readTime: '15 دقيقة',
+    readTime: '24 دقيقة',
     tags: ['تعلم البرمجة', 'الذكاء الاصطناعي', 'مبتدئين', 'طرق التعلم', 'ChatGPT', 'تطوير الذات', 'خارطة طريق'],
     contentHtml: `
       <p class="text-lg leading-relaxed mb-6 font-medium text-slate-200">
-        تغيرت قواعد تعلم البرمجة كلياً في 2026. لم يعد الطالب بحاجة لحفظ آلاف الدوال أو قضاء أيام في انتظار إجابة على منتديات الدعم لحل خطأ مطبعي في الكود. مع أدوات الذكاء الاصطناعي، أصبح بإمكانك امتلاك معلم خصوصي فائق الصبر يعمل معك على مدار 24 ساعة يومياً. ولكن، لتحقيق النجاح وتفادي فخ "وهم المعرفة"، يجب اتباع خطة تعليمية ممنهجة.
+        تغيرت قواعد تعلم البرمجة كلياً في 2026. لم يعد الطالب بحاجة لقضاء أيام في انتظار إجابة على منتدى لحل خطأ إملائي في سطر برمجي. مع أدوات الذكاء الاصطناعي، أصبح بإمكانك امتلاك معلم خصوصي فائق الصبر متاح على مدار الساعة. ولكن لتحقيق النجاح وتفادي فخ "وهم المعرفة" الناتج عن النسخ واللصق الأعمى، قمنا بصياغة هذه الخطة الميدانية الممتدة لستة أشهر.
       </p>
 
       <div class="my-8 rounded-2xl overflow-hidden border border-slate-800 bg-slate-950 p-2 shadow-2xl">
@@ -528,50 +605,68 @@ export const BLOG_POSTS_DATA: BlogPost[] = [
       </div>
 
       <h2 class="text-2xl font-bold text-indigo-400 mt-8 mb-4 border-r-4 border-indigo-500 pr-3">
-        خطة الـ 6 أشهر: من الصفر إلى مهندس برمجيات مؤهل
+        خطة الـ 6 أشهر التفصيلية مع الأهداف الأسبوعية
       </h2>
 
       <div class="space-y-4 my-6">
         <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
-          <h4 class="font-bold text-indigo-300 mb-1">الشهر 1: أساسيات علوم الحاسوب والتفكير المنطقي (Logic & Syntax)</h4>
-          <p class="text-slate-300 text-sm leading-relaxed">
-            ركز على لغة واحدة (TypeScript أو Python). اطلب من الذكاء الاصطناعي شرح المفاهيم باستخدام <em>تقنية فاينمان (Feynman Technique)</em> مع تشبيهات من الحياة اليومية. لا تنسخ الحلول، بل اكتب كل متغير ودالة بيدك.
+          <h4 class="font-bold text-indigo-300 text-base mb-1">الشهر 1: التفكير المنطقي وأساسيات اللغة (JavaScript/TypeScript أو Python)</h4>
+          <p class="text-slate-300 text-sm leading-relaxed mb-2">
+            ركز على المفاهيم الأساسية: المتغيرات، الشروط، الحلقات التكرارية، والدوال. استخدم الذكاء الاصطناعي بطريقة <em>"تقنية فاينمان"</em>: اطلب منه شرح المفهوم وكأنك تلميذ في سن العاشرة، ثم اشرح له أنت المفهوم بأسلوبك واطلب منه تصحيح فهمك.
           </p>
+          <div class="text-xs text-emerald-300 bg-slate-950 p-2.5 rounded font-mono">
+            المشروع التطبيقي: بناء تطبيق آلة حاسبة ومحول عملات تفاعلي في Terminal بدون أي مكتبات خارجية.
+          </div>
         </div>
 
         <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
-          <h4 class="font-bold text-indigo-300 mb-1">الشهر 2: هياكل البيانات والخوارزميات الأساسية (Data Structures)</h4>
-          <p class="text-slate-300 text-sm leading-relaxed">
-            تعلم المصفوفات (Arrays)، الكائنات (Objects)، القوائم المترابطة، وخوارزميات البحث والترتيب. اطلب من AI شرح الفرق في التعقيد الزمني (Big-O Notation) مع أمثلة بصرية ورسوم توضيحية.
+          <h4 class="font-bold text-indigo-300 text-base mb-1">الشهر 2: هياكل البيانات والخوارزميات (Data Structures & Algorithms)</h4>
+          <p class="text-slate-300 text-sm leading-relaxed mb-2">
+            تعلم المصفوفات، الكائنات، القوائم المترابطة، والأشجار الثنائية. اطلب من الذكاء الاصطناعي شرح التعقيد الزمني والمكاني (Big-O Notation) مع رسم تمثيلي للمصفوفات في الذاكرة.
           </p>
+          <div class="text-xs text-emerald-300 bg-slate-950 p-2.5 rounded font-mono">
+            المشروع التطبيقي: حل 30 مسألة على LeetCode (Easy/Medium) مع مناقشة الحلول البديلة مع ChatGPT.
+          </div>
         </div>
 
         <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
-          <h4 class="font-bold text-indigo-300 mb-1">الشهر 3: تطوير واجهات الويب الحديثة (Modern Web Frontend)</h4>
-          <p class="text-slate-300 text-sm leading-relaxed">
-            بناء تطبيقات تفاعلية باستخدام React و Tailwind CSS. تدرب على توجيه نماذج مثل Claude لتوليد مكونات UI معقدة ثم قم بتحليل كل سطر كود لفهم سبب استخدام كل Hook.
+          <h4 class="font-bold text-indigo-300 text-base mb-1">الشهر 3: تطوير واجهات الويب الحديثة (React 19 + Tailwind CSS)</h4>
+          <p class="text-slate-300 text-sm leading-relaxed mb-2">
+            بناء واجهات مستخدم تفاعلية، إدارة الحالة (State Management)، واستدعاء الـ APIs. تدرب على توجيه نماذج الذكاء الاصطناعي لبناء المكونات، ثم حلل كل سطر كود تفصيلياً وافهم سبب اختيار كل Hook.
           </p>
+          <div class="text-xs text-emerald-300 bg-slate-950 p-2.5 rounded font-mono">
+            المشروع التطبيقي: بناء لوحة تحكم لإدارة المهام والملاحظات مع دعم الوضع المظلم والتخزين المحلي.
+          </div>
         </div>
 
         <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
-          <h4 class="font-bold text-indigo-300 mb-1">الشهر 4: الخوادم وقواعد البيانات (Backend & Databases)</h4>
-          <p class="text-slate-300 text-sm leading-relaxed">
-            بناء واجهات برمجة التطبيقات (REST APIs) باستخدام Node.js / Express، والربط مع قواعد بيانات PostgreSQL أو MongoDB. تدرب على هندسة استعلامات SQL ومعالجة أمان المصادقة (JWT & OAuth).
+          <h4 class="font-bold text-indigo-300 text-base mb-1">الشهر 4: هندسة الخوادم وقواعد البيانات (Node.js, Express, PostgreSQL)</h4>
+          <p class="text-slate-300 text-sm leading-relaxed mb-2">
+            بناء واجهات برمجة التطبيقات (RESTful APIs)، المصادقة الآمنة عبر JWT و Cookies، وتصميم قواعد البيانات العلائقية. اطلب من النموذج كتابة استعلامات SQL وشرح استراتيجيات الفهرسة.
           </p>
+          <div class="text-xs text-emerald-300 bg-slate-950 p-2.5 rounded font-mono">
+            المشروع التطبيقي: بناء خادم API متكامل للمصادقة وإدارة المنتجات مع التوثيق عبر Swagger.
+          </div>
         </div>
 
         <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
-          <h4 class="font-bold text-indigo-300 mb-1">الشهر 5: بناء مشروع متكامل Full-Stack ونشره</h4>
-          <p class="text-slate-300 text-sm leading-relaxed">
-            صمم وابنِ مشروعاً حقيقياً يحل مشكلة فعلية، مثل منصة إدارة مهام ذكية أو دليل أدوات متخصص. استخدم الذكاء الاصطناعي كمراجع للأكواد (Code Reviewer) ومولد لاختبارات الجودة.
+          <h4 class="font-bold text-indigo-300 text-base mb-1">الشهر 5: بناء ونشر مشروع متكامل للإنتاج (Full-Stack Capstone Project)</h4>
+          <p class="text-slate-300 text-sm leading-relaxed mb-2">
+            صمم تطبيقاً حقيقياً يحل مشكلة فعلية، مثل منصة تجارة إلكترونية متكاملة أو نظام إدارة محتوى ذكي. وظف الذكاء الاصطناعي كمراجع كود (Code Reviewer) لتحديد الثغرات وتوليد اختبارات الوحدة.
           </p>
+          <div class="text-xs text-emerald-300 bg-slate-950 p-2.5 rounded font-mono">
+            المشروع التطبيقي: نشر المشروع كاملاً على Vercel و Supabase مع إعداد CI/CD pipeline وربط نطاق مخصص.
+          </div>
         </div>
 
         <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
-          <h4 class="font-bold text-indigo-300 mb-1">الشهر 6: التحضير للمقابلات التقنية ومحاكاة أسئلة التوظيف</h4>
-          <p class="text-slate-300 text-sm leading-relaxed">
-            استخدم ChatGPT في دور "المحاور التقني الصارم" (Strict Technical Interviewer). اطلب منه إجراء مقابلات صوتية وكتابية حية وطرح أسئلة حول تصميم الأنظمة (System Design) ومراجعة سيرتك الذاتية.
+          <h4 class="font-bold text-indigo-300 text-base mb-1">الشهر 6: الاستعداد للمقابلات التقنية وبناء السيرة الذاتية</h4>
+          <p class="text-slate-300 text-sm leading-relaxed mb-2">
+            حول ChatGPT إلى محاور تقني صارم (Strict Technical Interviewer). اطلب منه طرح أسئلة تصميم الأنظمة (System Design) ومراجعة مشاريعك على GitHub وتقديم ملاحظات لتحسين جودة الكود.
           </p>
+          <div class="text-xs text-emerald-300 bg-slate-950 p-2.5 rounded font-mono">
+            المشروع التطبيقي: إعداد ملف GitHub README احترافي، ومحاكاة 5 مقابلات توظيف تقنية مسجلة.
+          </div>
         </div>
       </div>
     `
@@ -588,7 +683,7 @@ export const BLOG_POSTS_DATA: BlogPost[] = [
     category: 'شروحات عميقة',
     author: 'يوسف محمد - مهندس برمجيات ومؤسس الموقع',
     publishDate: '2026-07-26',
-    readTime: '13 دقيقة',
+    readTime: '20 دقيقة',
     tags: ['DeepSeek-R1', 'Qwen 2.5', 'Ollama', 'Continue.dev', 'تشغيل محلي', 'خصوصية', 'VS Code', 'البرمجة'],
     contentHtml: `
       <p class="text-lg leading-relaxed mb-6 font-medium text-slate-200">
@@ -602,349 +697,393 @@ export const BLOG_POSTS_DATA: BlogPost[] = [
           class="w-full h-auto rounded-xl object-cover max-h-[400px]" 
         />
         <p class="text-center text-xs text-slate-400 mt-2 font-mono">
-          بيئة التشغيل المحلي واستخدام سطر الأوامر لتشغيل نماذج التفكير الاستنتاجي
+          إعداد بيئة عمل برمجية ذكية تعمل محلياً بالكامل عبر Ollama ومحرر VS Code
         </p>
       </div>
 
       <h2 class="text-2xl font-bold text-indigo-400 mt-8 mb-4 border-r-4 border-indigo-500 pr-3">
-        المتطلبات التقنية لتشغيل النماذج محلياً بسلاسة
+        المتطلبات العتادية الموصى بها (Hardware Requirements)
       </h2>
-      <div class="overflow-x-auto my-6 border border-slate-800 rounded-2xl bg-slate-950 p-2">
-        <table class="w-full text-xs sm:text-sm text-right text-slate-300">
-          <thead class="bg-slate-900 text-indigo-300 font-bold border-b border-slate-800">
-            <tr>
-              <th class="p-3">حجم النموذج (Model Size)</th>
-              <th class="p-3">الذاكرة العشوائية المطلوبة (RAM)</th>
-              <th class="p-3">بطاقة الرسوميات الموصى بها (VRAM)</th>
-              <th class="p-3">أفضل استخدام</th>
-            </tr>
-          </thead>
-          <tbody class="divide-y divide-slate-800/60">
-            <tr>
-              <td class="p-3 font-bold text-white">7B - 8B (مثل Qwen 2.5 Coder 7B)</td>
-              <td class="p-3 text-emerald-400">8 GB - 16 GB</td>
-              <td class="p-3">6 GB VRAM أو معالج M1/M2/M3</td>
-              <td class="p-3">الإكمال التلقائي السريع داخل المحرر</td>
-            </tr>
-            <tr>
-              <td class="p-3 font-bold text-white">14B (مثل DeepSeek-R1 14B)</td>
-              <td class="p-3 text-purple-300">16 GB - 32 GB</td>
-              <td class="p-3">8 GB - 12 GB VRAM</td>
-              <td class="p-3">التوازن المثالي بين الذكاء والسرعة</td>
-            </tr>
-            <tr>
-              <td class="p-3 font-bold text-white">32B+ (DeepSeek-R1 32B)</td>
-              <td class="p-3 text-amber-300">32 GB - 64 GB</td>
-              <td class="p-3">16 GB+ VRAM (RTX 4090 أو Mac Studio)</td>
-              <td class="p-3">حل المسائل المعمارية البرمجية الثقيلة</td>
-            </tr>
-          </tbody>
-        </table>
+      <div class="space-y-3 mb-6 text-sm">
+        <div class="p-3.5 rounded-xl bg-slate-900 border border-slate-800">
+          <strong class="text-indigo-400">للنماذج الخفيفة (7B / 8B Parameters مثل Qwen 2.5 Coder 7B):</strong>
+          <span class="text-slate-300 block text-xs mt-1">ذاكرة RAM سعة 16GB، ومعالج حديث (Apple Silicon M1/M2/M3 أو معالج Intel/AMD بـ 6 أنوية فأكثر)، أو كرت شاشة RTX 3060 (6GB VRAM).</span>
+        </div>
+        <div class="p-3.5 rounded-xl bg-slate-900 border border-slate-800">
+          <strong class="text-indigo-400">للنماذج المتوسطة القوية (14B / 32B مثل DeepSeek-R1-Distill-14B):</strong>
+          <span class="text-slate-300 block text-xs mt-1">ذاكرة RAM سعة 32GB، أو كرت شاشة RTX 4070/4080 بسعة 12GB - 16GB VRAM للوصول لسرعات توليد فائقة.</span>
+        </div>
       </div>
 
       <h2 class="text-2xl font-bold text-indigo-400 mt-8 mb-4 border-r-4 border-indigo-500 pr-3">
-        الخطوة 1: تثبيت Ollama وتشغيل النموذج
+        خطوات التثبيت والتشغيل خطوة بخطوة
       </h2>
-      <p class="leading-relaxed mb-3 text-slate-300">
-        قم بتنزيل أداة Ollama من الموقع الرسمي لنظامك (Windows / macOS / Linux)، ثم افتح موجه الأوامر (Terminal) ونفذ الأمر التالي لتنزيل وتشغيل نموذج DeepSeek-R1:
+
+      <h3 class="text-lg font-bold text-purple-300 mt-4 mb-2">الخطوة 1: تثبيت Ollama</h3>
+      <p class="text-slate-300 text-sm mb-3">
+        قم بتنزيل وتثبيت أداة Ollama المجانية من الموقع الرسمي (ollama.com) لأنظمة Windows أو macOS أو Linux. بعد التثبيت، افتح موجه الأوامر (Terminal) ونفذ الأمر التالي لتنزيل وتشغيل النموذج المخصص للبرمجة:
       </p>
 
-      <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 font-mono text-sm mb-6 text-emerald-400 dir-ltr">
-        <p># لتشغيل نموذج التفكير العميق بحجم 14 مليار معامل:</p>
-        <p class="text-white font-bold">ollama run deepseek-r1:14b</p>
+      <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 font-mono text-xs text-emerald-300 mb-6 dir-ltr overflow-x-auto">
+        <p class="text-slate-500"># تنزيل وتشغيل نموذج Qwen 2.5 Coder فائق الدقة للبرمجة</p>
+        <p>ollama run qwen2.5-coder:7b</p>
         <br />
-        <p># أو لتشغيل النموذج البرمجي فائق السرعة من Qwen:</p>
-        <p class="text-white font-bold">ollama run qwen2.5-coder:7b</p>
+        <p class="text-slate-500"># أو لتشغيل نموذج التفكير المنطقي DeepSeek R1</p>
+        <p>ollama run deepseek-r1:8b</p>
       </div>
 
-      <h2 class="text-2xl font-bold text-indigo-400 mt-8 mb-4 border-r-4 border-indigo-500 pr-3">
-        الخطوة 2: ربط النموذج بمحرر VS Code عبر إضافة Continue
-      </h2>
-      <p class="leading-relaxed mb-4 text-slate-300">
-        ثبت إضافة <strong>Continue</strong> في VS Code، ثم أضف الإعداد التالي في ملف <code class="bg-slate-800 text-indigo-300 px-2 py-0.5 rounded font-mono">config.json</code> الخاص بالإضافة لربطها بـ Ollama تلقائياً:
+      <h3 class="text-lg font-bold text-purple-300 mt-4 mb-2">الخطوة 2: ربط النموذج بمحرر VS Code عبر Continue.dev</h3>
+      <p class="text-slate-300 text-sm mb-3">
+        1. افتح متجر إضافات VS Code وابحث عن إضافة <strong>Continue</strong> وثبتها.<br />
+        2. افتح ملف إعدادات الإضافة <code class="text-indigo-300 font-mono">~/.continue/config.json</code> وأضف الإعداد التالي:
       </p>
 
-      <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 font-mono text-xs text-indigo-300 mb-6 leading-relaxed dir-ltr overflow-x-auto">
+      <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 font-mono text-xs text-indigo-300 mb-6 dir-ltr overflow-x-auto">
         <p>&#123;</p>
         <p class="pl-4">"models": [</p>
         <p class="pl-8">&#123;</p>
-        <p class="pl-12">"title": "DeepSeek R1 Local",</p>
+        <p class="pl-12">"title": "Local Qwen 2.5 Coder 7B",</p>
         <p class="pl-12">"provider": "ollama",</p>
-        <p class="pl-12">"model": "deepseek-r1:14b"</p>
+        <p class="pl-12">"model": "qwen2.5-coder:7b"</p>
+        <p class="pl-8">&#125;,</p>
+        <p class="pl-8">&#123;</p>
+        <p class="pl-12">"title": "Local DeepSeek R1 8B",</p>
+        <p class="pl-12">"provider": "ollama",</p>
+        <p class="pl-12">"model": "deepseek-r1:8b"</p>
         <p class="pl-8">&#125;</p>
         <p class="pl-4">],</p>
         <p class="pl-4">"tabAutocompleteModel": &#123;</p>
-        <p class="pl-8">"title": "Qwen Coder 7B Autocomplete",</p>
+        <p class="pl-8">"title": "Qwen Coder Autocomplete",</p>
         <p class="pl-8">"provider": "ollama",</p>
-        <p class="pl-8">"model": "qwen2.5-coder:7b"</p>
+        <p class="pl-8">"model": "qwen2.5-coder:1.5b-base"</p>
         <p class="pl-4">&#125;</p>
         <p>&#125;</p>
       </div>
 
-      <h2 class="text-2xl font-bold text-indigo-400 mt-8 mb-4 border-r-4 border-indigo-500 pr-3">
-        النتيجة النهائية
-      </h2>
-      <p class="leading-relaxed mb-4 text-slate-300">
-        أصبح لديك الآن مساعد برمجي متكامل فائق الذكاء داخل محرر الأكواد المفضل لديك، يعمل بكامل طاقته في الطائرة أو في أوقات انقطاع الإنترنت وبضمان 100% لخصوصية بياناتك ومشاريعك.
+      <p class="text-slate-300 text-sm leading-relaxed">
+        الآن، يمكنك الضغط على <code class="bg-slate-800 px-2 py-0.5 rounded font-mono text-xs">Ctrl + I</code> أو <code class="bg-slate-800 px-2 py-0.5 rounded font-mono text-xs">Cmd + I</code> داخل أي ملف كود في VS Code لتعديل الأكواد أو تصحيح الأخطاء محلياً وبسرعة فائقة.
       </p>
     `
   },
 
   // =========================================================================
-  // ARTICLE 7: الذكاء الاصطناعي في تطوير الألعاب
+  // ARTICLE 7: تطوير الألعاب بالذكاء الاصطناعي
   // =========================================================================
   {
     id: 'ai-game-development-guide-2026',
-    title: 'دليل استخدام الذكاء الاصطناعي في تطوير وتصميم الألعاب في 2026: Unity, Godot, Unreal وتوليد الأصول الذكية',
+    title: 'دليل مطوري الألعاب بالذكاء الاصطناعي 2026: إنشاء الشخصيات، كتابة سكربتات Unity و Godot، وتوليد عوالم ثلاثية الأبعاد',
     slug: 'ai-game-development-guide-2026',
-    excerpt: 'دليل شامل لمطوري الألعاب المستقلين (Indie Devs) والشركات يوضح كيفية تسخير الذكاء الاصطناعي في كتابة سكربتات الألعاب، توليد الرسومات ثنائية وثلاثية الأبعاد، وتصميم سلوك الأعداء والـ NPCs.',
-    category: 'شروحات عميقة',
-    author: 'يوسف محمد - مهندس برمجيات وخبير ذكاء اصطناعي',
-    publishDate: '2026-08-10',
-    readTime: '16 دقيقة',
-    tags: ['تطوير الألعاب', 'Game Dev', 'Unity', 'Godot', 'Unreal Engine', 'Pixel Art', '3D Assets', 'NPCs'],
+    excerpt: 'دليل عملي شامل يوضح لمطوري الألعاب المستقلين (Indie Devs) كيفية بناء ألعاب كاملة في Unity و Godot باستخدام أدوات الذكاء الاصطناعي لتوليد الأصول، كتابة خوارزميات الذكاء الاصطناعي للأعداء، والموسيقى التفاعلية.',
+    category: 'دليل الأدوات',
+    author: 'يوسف محمد - مهندس برمجيات ومطور ألعاب',
+    publishDate: '2026-08-05',
+    readTime: '21 دقيقة',
+    tags: ['تطوير الألعاب', 'Unity', 'Godot', 'Pixel Art', 'Meshy', 'Indie Games', 'C#'],
     contentHtml: `
       <p class="text-lg leading-relaxed mb-6 font-medium text-slate-200">
-        أصبح بإمكان مطور الألعاب المستقل اليوم بناء عوالم ألعاب غنية كان يتطلب إنتاجها في السابق فرقاً مؤلفة من عشرات الفنانين والمبرمجين. من كتابة منطق حركة الشخصيات وسكربتات الفيزياء، إلى توليد الرسوم والمؤثرات الصوتية وحوارات الشخصيات غير القابلة للعب (NPCs)، أحدث الذكاء الاصطناعي ثورة تمكن المطورين الشغوفين من تحويل أفكارهم إلى ألعاب مكتملة قابلة للنشر على Steam ومتاجر الهواتف.
+        أتاح التطور المذهل في أدوات الذكاء الاصطناعي للمطور المستقل (Solo Indie Developer) إمكانية إنجاز ألعاب متكاملة كانت تتطلب في السابق استوديوهات تضم عشرات المصممين والمبرمجين. من توليد رسومات الشخصيات (Sprites)، إلى كتابة خوارزميات حركة الأعداء والفيزياء، أصبح بإمكانك تحويل فكرة لعبتك إلى واقع ملموس في أسابيع قليلة.
       </p>
 
       <div class="my-8 rounded-2xl overflow-hidden border border-slate-800 bg-slate-950 p-2 shadow-2xl">
         <img 
           src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1200&q=80" 
-          alt="تطوير الألعاب وتصميم العوالم التفاعلية بالذكاء الاصطناعي" 
+          alt="تطوير الألعاب بالذكاء الاصطناعي باستخدام Unity و Godot" 
           class="w-full h-auto rounded-xl object-cover max-h-[400px]" 
         />
         <p class="text-center text-xs text-slate-400 mt-2 font-mono">
-          دمج الذكاء الاصطناعي في محركات الألعاب لبناء البيئات وتطوير سلوك الذكاء الاصطناعي للشخصيات
+          دمج أدوات الذكاء الاصطناعي في دورة إنتاج الألعاب المستقلة من الفكرة إلى الإطلاق
         </p>
       </div>
 
       <h2 class="text-2xl font-bold text-indigo-400 mt-8 mb-4 border-r-4 border-indigo-500 pr-3">
-        1. كتابة سكربتات محركات الألعاب (C# Unity و GDScript Godot)
+        1. توليد سكربتات حركة الشخصيات والأعداء في Unity C#
       </h2>
-      <p class="leading-relaxed mb-4 text-slate-300">
-        يتميز الذكاء الاصطناعي بقدرة عالية على كتابة سكربتات حركة الشخصيات (Character Controllers)، أنظمة الجرد (Inventory Systems)، وحسابات مسارات الأعداء. إليك نموذج لبرومبت احترافي لتوليد سكربت حركة مرن في Unity:
+      <p class="leading-relaxed mb-3 text-slate-300">
+        إليك مثال لسكربت حركة الشخصية مع القفز السلس ومعالجة التصادم (Smooth Movement Controller):
       </p>
 
-      <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 font-mono text-xs text-indigo-300 mb-6 leading-relaxed dir-ltr overflow-x-auto">
-        <p class="text-slate-500">// برومبت توجيه الذكاء الاصطناعي لكتابة سكربت حركة C# Unity</p>
-        <p>"Write a production-ready C# 2D Character Controller for Unity 6 using the New Input System.</p>
-        <p>Requirements:</p>
-        <p>- Smooth acceleration and deceleration with variable jump height.</p>
-        <p>- Coyote Time and Jump Buffering for precise, responsive platforming feel.</p>
-        <p>- Ground detection using OverlapCircle with LayerMask.</p>
-        <p>- Clean serialized fields with tooltips and no GC allocations in Update()."</p>
+      <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 font-mono text-xs text-indigo-300 mb-6 dir-ltr overflow-x-auto">
+        <p class="text-slate-500">// PlayerController2D.cs - Unity C# script generated with AI</p>
+        <p><span class="text-purple-400">using</span> UnityEngine;</p>
+        <br />
+        <p><span class="text-purple-400">public class</span> <span class="text-emerald-300">PlayerController2D</span> : MonoBehaviour &#123;</p>
+        <p class="pl-4">[SerializeField] <span class="text-purple-400">private float</span> moveSpeed = 8f;</p>
+        <p class="pl-4">[SerializeField] <span class="text-purple-400">private float</span> jumpForce = 14f;</p>
+        <p class="pl-4">[SerializeField] <span class="text-purple-400">private</span> LayerMask groundLayer;</p>
+        <p class="pl-4">[SerializeField] <span class="text-purple-400">private</span> Transform groundCheck;</p>
+        <br />
+        <p class="pl-4"><span class="text-purple-400">private</span> Rigidbody2D rb;</p>
+        <p class="pl-4"><span class="text-purple-400">private bool</span> isGrounded;</p>
+        <p class="pl-4"><span class="text-purple-400">private float</span> horizontalInput;</p>
+        <br />
+        <p class="pl-4"><span class="text-purple-400">void</span> Start() &#123;</p>
+        <p class="pl-8">rb = GetComponent&lt;Rigidbody2D&gt;();</p>
+        <p class="pl-4">&#125;</p>
+        <br />
+        <p class="pl-4"><span class="text-purple-400">void</span> Update() &#123;</p>
+        <p class="pl-8">horizontalInput = Input.GetAxisRaw(<span class="text-emerald-300">"Horizontal"</span>);</p>
+        <p class="pl-8">isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);</p>
+        <br />
+        <p class="pl-8"><span class="text-purple-400">if</span> (Input.GetButtonDown(<span class="text-emerald-300">"Jump"</span>) &amp;&amp; isGrounded) &#123;</p>
+        <p class="pl-12">rb.linearVelocity = <span class="text-purple-400">new</span> Vector2(rb.linearVelocity.x, jumpForce);</p>
+        <p class="pl-8">&#125;</p>
+        <p class="pl-4">&#125;</p>
+        <br />
+        <p class="pl-4"><span class="text-purple-400">void</span> FixedUpdate() &#123;</p>
+        <p class="pl-8">rb.linearVelocity = <span class="text-purple-400">new</span> Vector2(horizontalInput * moveSpeed, rb.linearVelocity.y);</p>
+        <p class="pl-4">&#125;</p>
+        <p>&#125;</p>
       </div>
 
       <h2 class="text-2xl font-bold text-indigo-400 mt-8 mb-4 border-r-4 border-indigo-500 pr-3">
-        2. توليد الأصول الرسومية والمجسمات (2D Sprites & 3D Meshes)
+        2. سكربت حركة الشخصية في محرك Godot 4 باستخدام GDScript
       </h2>
-      <p class="leading-relaxed mb-4 text-slate-300">
-        يمكن للمطورين الاستفادة من مجموعة أدوات متخصصة لإنتاج أصول ألعاب متناسقة النمط الفني:
+      <p class="leading-relaxed mb-3 text-slate-300">
+        يعد محرك Godot الخيار المفضل لدى مطوري الألعاب مفتوحة المصدر لخفته وقوته. إليك سكربت تحكم كامل في الشخصية مع دعم الجاذبية والتسارع:
       </p>
-      <ul class="list-disc list-inside space-y-2 mb-6 text-slate-300 pr-2">
-        <li><strong>PixelLab & RetroDiffusion:</strong> توليد رسومات بكسل آرت مع حركة إطارات جاهزة (Sprite Sheets).</li>
-        <li><strong>Meshy.ai & Tripo3D:</strong> تحويل الرسومات والمفاهيم الفنية إلى مجسمات ثلاثية الأبعاد خفيفة الأوجه (Low-poly) مع خرائط الإكساء (Textures).</li>
-        <li><strong>ElevenLabs & Suno:</strong> توليد أصوات الشخصيات والمؤثرات الصوتية والموسيقى التصويرية التفاعلية.</li>
-      </ul>
+
+      <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 font-mono text-xs text-emerald-300 mb-6 dir-ltr overflow-x-auto">
+        <p class="text-slate-500"># player.gd - Character controller in Godot 4</p>
+        <p>extends CharacterBody2D</p>
+        <br />
+        <p>const SPEED = 300.0</p>
+        <p>const JUMP_VELOCITY = -400.0</p>
+        <p>var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")</p>
+        <br />
+        <p>func _physics_process(delta):</p>
+        <p class="pl-4"># إضافة الجاذبية عند عدم ملامسة الأرض</p>
+        <p class="pl-4">if not is_on_floor():</p>
+        <p class="pl-8">velocity.y += gravity * delta</p>
+        <br />
+        <p class="pl-4"># معالجة القفز</p>
+        <p class="pl-4">if Input.is_action_just_pressed("ui_accept") and is_on_floor():</p>
+        <p class="pl-8">velocity.y = JUMP_VELOCITY</p>
+        <br />
+        <p class="pl-4"># معالجة الحركة الأفقية والتسارع السلس</p>
+        <p class="pl-4">var direction = Input.get_axis("ui_left", "ui_right")</p>
+        <p class="pl-4">if direction:</p>
+        <p class="pl-8">velocity.x = direction * SPEED</p>
+        <p class="pl-4">else:</p>
+        <p class="pl-8">velocity.x = move_toward(velocity.x, 0, SPEED)</p>
+        <br />
+        <p class="pl-4">move_and_slide()</p>
+      </div>
 
       <h2 class="text-2xl font-bold text-indigo-400 mt-8 mb-4 border-r-4 border-indigo-500 pr-3">
-        3. أنظمة الحوار التفاعلي للشخصيات (Dynamic AI NPCs)
+        3. أفضل أدوات الذكاء الاصطناعي المجانية لصناعة أصول الألعاب (Game Assets)
       </h2>
-      <p class="leading-relaxed mb-4 text-slate-300">
-        بدلاً من كتابة شجرة حوارات ثابتة ومحدودة، أصبح بإمكان المطورين ربط نماذج لغوية خفيفة داخل اللعبة لتوليد ردود حية تعتمد على تصرفات اللاعب السابقة وسياق القصة، مما يضفي عمقاً غير مسبوق على عوالم ألعاب تقمص الأدوار (RPGs).
-      </p>
+      <ul class="list-disc list-inside space-y-3 mb-6 text-slate-300 pr-2">
+        <li><strong>PixelLab:</strong> توليد رسومات البكسل المتناسقة وشخصيات ألعاب المنصات (Platformers).</li>
+        <li><strong>Meshy.ai:</strong> تحويل الأفكار إلى مجسمات ثلاثية الأبعاد 3D بصيغة GLTF جاهزة للإدراج.</li>
+        <li><strong>Suno AI & Udio:</strong> توليد موسيقى خلفية ملحمية ومؤثرات صوتية فريدة لألعابك.</li>
+      </ul>
     `
   },
 
   // =========================================================================
-  // ARTICLE 8: كيف تبني تطبيق Full-Stack بالذكاء الاصطناعي
+  // ARTICLE 8: بناء تطبيق Full-Stack بالذكاء الاصطناعي
   // =========================================================================
   {
     id: 'build-fullstack-app-with-ai',
-    title: 'كيف تبني تطبيق ويب متكامل (Full-Stack) باستخدام أدوات AI الحديثة من الفكرة إلى الإنتاج خلال ساعات',
+    title: 'كيف تبني تطبيق ويب Full-Stack حقيقي متكامل بالذكاء الاصطناعي من الصفر حتى النشر في أقل من ساعتين',
     slug: 'build-fullstack-app-with-ai',
-    excerpt: 'دليل عملي تفصيلي خطوة بخطوة لبناء تطبيق ويب حقيقي متكامل (React + Node.js + Tailwind + Database) وتأمينه ورفعه على خوادم الإنتاج باستخدام أدوات v0 و Cursor و Claude.',
+    excerpt: 'دليل عملي واقعي خطوة بخطوة يوضح كيف تستخدم أدوات الذكاء الاصطناعي لتخطيط المعمارية، بناء قاعدة البيانات، كتابة مسارات الـ API، وتصميم الواجهة ونشر التطبيق على السحابة.',
     category: 'شروحات عميقة',
     author: 'يوسف محمد - مهندس برمجيات ومؤسس الموقع',
-    publishDate: '2026-08-11',
-    readTime: '15 دقيقة',
-    tags: ['Full-Stack', 'تطوير الويب', 'React', 'Node.js', 'Cursor', 'v0', 'Vercel', 'برمجة التطبيقات'],
+    publishDate: '2026-08-05',
+    readTime: '23 دقيقة',
+    tags: ['Full-Stack', 'React', 'Node.js', 'PostgreSQL', 'تطوير الويب', 'Vercel', 'Supabase'],
     contentHtml: `
       <p class="text-lg leading-relaxed mb-6 font-medium text-slate-200">
-        كان بناء تطبيق ويب متكامل (Full-Stack Application) في الماضي يستغرق أسابيع من التخطيط، تصميم قواعد البيانات، كتابة واجهات الـ Backend، وبناء وتنسيق صفحات الـ Frontend. اليوم، وبفضل أدوات الذكاء الاصطناعي الحديثة، أصبح بإمكان مهندس البرمجيات الانتقال من مجرد فكرة مجردة إلى تطبيق حقيقي متصل بقاعدة بيانات ومنشور على الإنترنت في غضون ساعات قليلة.
+        بناء تطبيق ويب متكامل من الصفر اعتاد أن يستغرق أسابيع من الإعداد المتكرر وتثبيت الحزم وضبط الروابط بين الخادم وقاعدة البيانات. مع المنهجية الحديثة القائمة على مساعدات الذكاء الاصطناعي، يمكنك الانتقال من مرحلة الفكرة المجردة إلى تطبيق حي يعمل على الإنترنت ومتاح للمستخدمين في أقل من ساعتين.
       </p>
 
       <div class="my-8 rounded-2xl overflow-hidden border border-slate-800 bg-slate-950 p-2 shadow-2xl">
         <img 
           src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80" 
-          alt="بناء تطبيق ويب متكامل Full-Stack باستخدام أدوات الذكاء الاصطناعي" 
+          alt="بناء تطبيق Full-Stack بالذكاء الاصطناعي ونشره سحابياً" 
           class="w-full h-auto rounded-xl object-cover max-h-[400px]" 
         />
         <p class="text-center text-xs text-slate-400 mt-2 font-mono">
-          مراحل بناء ونشر تطبيقات الويب الحديثة بالاستعانة بمساعدات الذكاء الاصطناعي
+          مخطط بناء ونشر التطبيقات السحابية الحديثة بالاعتماد على الذكاء الاصطناعي
         </p>
       </div>
 
       <h2 class="text-2xl font-bold text-indigo-400 mt-8 mb-4 border-r-4 border-indigo-500 pr-3">
-        مراحل العمل خطوة بخطوة
+        المراحل الخمس لتنفيذ التطبيق السريع
       </h2>
-
       <div class="space-y-4 my-6">
         <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
-          <h4 class="font-bold text-indigo-300 mb-1">المرحلة 1: تصميم معمارية النظام ومخطط البيانات (System Architecture)</h4>
-          <p class="text-slate-300 text-sm leading-relaxed">
-            ابدأ بتوجيه ChatGPT أو Claude لرسم مخطط قاعدة البيانات (ERD Diagram) وتعريف العلاقات بين الجداول بصيغة Drizzle ORM أو Prisma Schema.
-          </p>
+          <h4 class="font-bold text-indigo-300 mb-1 text-base">المرحلة 1: هندسة مخطط قاعدة البيانات (Schema Design)</h4>
+          <p class="text-slate-300 text-sm leading-relaxed">استخدم ChatGPT لتوليد جداول PostgreSQL وعلاقاتها مع ملفات تهيئة Supabase أو Prisma ORM.</p>
         </div>
-
         <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
-          <h4 class="font-bold text-indigo-300 mb-1">المرحلة 2: توليد واجهات المستخدم التفاعلية عبر v0.dev</h4>
-          <p class="text-slate-300 text-sm leading-relaxed">
-            استخدم أداة v0 لتوليد شاشات التطبيق ولوحة التحكم باستخدام مكونات Tailwind CSS و Lucide Icons مع مراعاة التجاوب الكامل مع الهواتف الذكية.
-          </p>
+          <h4 class="font-bold text-indigo-300 mb-1 text-base">المرحلة 2: بناء مسارات الـ API والتحقق من المدخلات (Backend & Validation)</h4>
+          <p class="text-slate-300 text-sm leading-relaxed">توليد دوال Express أو Next.js Server Actions مع التحقق الصارم عبر Zod لمنع إدخال بيانات غير صحيحة.</p>
         </div>
-
         <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
-          <h4 class="font-bold text-indigo-300 mb-1">المرحلة 3: تجميع المشروع وربط الخدمات في محرر Cursor</h4>
-          <p class="text-slate-300 text-sm leading-relaxed">
-            افتح المشروع داخل Cursor، واستخدم ميزة Composer لربط الواجهات بالـ API endpoints، وإضافة منطق المصادقة والتحقق من صحة المدخلات عبر Zod.
-          </p>
+          <h4 class="font-bold text-indigo-300 mb-1 text-base">المرحلة 3: توليد الواجهات التفاعلية (Frontend UI Components)</h4>
+          <p class="text-slate-300 text-sm leading-relaxed">استخدام v0.dev أو Claude 3.5 Sonnet لتوليد مكونات React أنيقة متوافقة مع الهواتف الذكية عبر Tailwind CSS.</p>
         </div>
-
         <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
-          <h4 class="font-bold text-indigo-300 mb-1">المرحلة 4: الاختبار الآلي وتدقيق الأمان</h4>
-          <p class="text-slate-300 text-sm leading-relaxed">
-            اطلب من النموذج فحص الكود لكشف أي تسريبات أمنية أو أخطاء في صلاحيات الوصول (Authorization flaws) وتوليد اختبارات التكامل.
-          </p>
+          <h4 class="font-bold text-indigo-300 mb-1 text-base">المرحلة 4: اختبار الأمان وتدقيق الجودة (Security & Quality Audit)</h4>
+          <p class="text-slate-300 text-sm leading-relaxed">فحص مسارات المصادقة وحماية بيانات المستخدمين والتأكد من عدم وجود تسريبات في مفاتيح البيئة (Environment Variables).</p>
         </div>
-
         <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
-          <h4 class="font-bold text-indigo-300 mb-1">المرحلة 5: النشر السحابي وربط النطاق (Production Deployment)</h4>
-          <p class="text-slate-300 text-sm leading-relaxed">
-            نشر المشروع على منصات Vercel أو Render مع إعداد متغيرات البيئة السرية وشهادات SSL المجانية في دقائق معدودة.
-          </p>
+          <h4 class="font-bold text-indigo-300 mb-1 text-base">المرحلة 5: النشر السحابي التلقائي (Deployment on Vercel)</h4>
+          <p class="text-slate-300 text-sm leading-relaxed">ربط مستودع GitHub بمنصة Vercel لإنشاء خط نشر مستمر (CI/CD) يحدّث التطبيق مع كل تعديل على الفرع الرئيسي.</p>
         </div>
+      </div>
+
+      <h2 class="text-2xl font-bold text-indigo-400 mt-8 mb-4 border-r-4 border-indigo-500 pr-3">
+        كود نموذجي متكامل لمسار API مع التحقق الصارم (Zod + Express + TypeScript)
+      </h2>
+      <div class="bg-slate-950 p-5 rounded-xl border border-slate-800 font-mono text-xs text-indigo-300 mb-6 dir-ltr overflow-x-auto leading-relaxed">
+        <p><span class="text-purple-400">import</span> express, &#123; Request, Response &#125; <span class="text-purple-400">from</span> <span class="text-emerald-300">'express'</span>;</p>
+        <p><span class="text-purple-400">import</span> &#123; z &#125; <span class="text-purple-400">from</span> <span class="text-emerald-300">'zod'</span>;</p>
+        <br />
+        <p><span class="text-purple-400">const</span> router = express.Router();</p>
+        <br />
+        <p><span class="text-slate-500">// تعريف مخطط التحقق من المدخلات</span></p>
+        <p><span class="text-purple-400">const</span> CreateItemSchema = z.object(&#123;</p>
+        <p class="pl-4">title: z.string().min(3).max(100),</p>
+        <p class="pl-4">description: z.string().optional(),</p>
+        <p class="pl-4">price: z.number().positive(),</p>
+        <p>&#125;);</p>
+        <br />
+        <p>router.post(<span class="text-emerald-300">'/items'</span>, <span class="text-purple-400">async</span> (req: Request, res: Response) =&gt; &#123;</p>
+        <p class="pl-4"><span class="text-purple-400">try</span> &#123;</p>
+        <p class="pl-8"><span class="text-purple-400">const</span> validatedData = CreateItemSchema.parse(req.body);</p>
+        <p class="pl-8"><span class="text-slate-500">// حفظ العنصر في قاعدة البيانات</span></p>
+        <p class="pl-8">res.status(201).json(&#123; success: <span class="text-amber-300">true</span>, data: validatedData &#125;);</p>
+        <p class="pl-4">&#125; <span class="text-purple-400">catch</span> (error) &#123;</p>
+        <p class="pl-8"><span class="text-purple-400">if</span> (error <span class="text-purple-400">instanceof</span> z.ZodError) &#123;</p>
+        <p class="pl-12">res.status(400).json(&#123; success: <span class="text-amber-300">false</span>, errors: error.errors &#125;);</p>
+        <p class="pl-12"><span class="text-purple-400">return</span>;</p>
+        <p class="pl-8">&#125;</p>
+        <p class="pl-8">res.status(500).json(&#123; success: <span class="text-amber-300">false</span>, message: <span class="text-emerald-300">'Internal Server Error'</span> &#125;);</p>
+        <p class="pl-4">&#125;</p>
+        <p>&#125;);</p>
       </div>
     `
   },
 
   // =========================================================================
-  // ARTICLE 9: دليل الطلاب والباحثين للاستفادة من الذكاء الاصطناعي
+  // ARTICLE 9: دليل الطلاب والباحثين في البحث العلمي
   // =========================================================================
   {
     id: 'ai-research-and-academic-writing-students',
-    title: 'دليل الطلاب والباحثين للاستفادة القصوى من أدوات الذكاء الاصطناعي في الأبحاث وكتابة المراجع بنزاهة أكاديمية',
+    title: 'دليل الطلاب والباحثين لاستخدام الذكاء الاصطناعي في البحث العلمي وإعداد الأطروحات دون انتهاك النزاهة الأكاديمية',
     slug: 'ai-research-and-academic-writing-students',
-    excerpt: 'دليل أكاديمي عملي للطلاب والباحثين يوضح كيفية استخدام الذكاء الاصطناعي لتلخيص الأوراق العلمية، تنظيم المراجع، واستخراج البيانات دون الوقوع في فخ الانتحال العلمي أو التضليل.',
+    excerpt: 'دليل منهجي يوضح للطلاب والباحثين كيفية استثمار أدوات مثل Consensus و Elicit و NotebookLM لتلخيص الأوراق العلمية الموثوقة واستخراج المراجع وتطوير الفرضيات مع الالتزام بالنزاهة الأكاديمية.',
     category: 'دليل الأدوات',
-    author: 'يوسف محمد - باحث تقني ومدرب',
-    publishDate: '2026-08-12',
-    readTime: '14 دقيقة',
-    tags: ['الطلاب', 'أبحاث علمية', 'التعليم', 'أدوات مجانية', 'تلخيص أبحاث', 'نزاهة أكاديمية', 'Consensus'],
+    author: 'يوسف محمد - فريق التحرير التقني والبحثي',
+    publishDate: '2026-08-05',
+    readTime: '21 دقيقة',
+    tags: ['البحث العلمي', 'الطلاب', 'أدوات أكاديمية', 'Consensus', 'Elicit', 'NotebookLM', 'النزاهة الأكاديمية'],
     contentHtml: `
       <p class="text-lg leading-relaxed mb-6 font-medium text-slate-200">
-        يمثل الذكاء الاصطناعي أداة تمكين هائلة للطلاب والباحثين الأكاديميين إذا تم استخدامه بوعي ومسؤولية. من استعراض الأدبيات السابقة (Literature Review) وتلخيص مئات الأوراق البحثية المعقدة في دقائق، إلى تنظيم المراجع وصياغة الفرضيات الإحصائية، توفر أدوات الذكاء الاصطناعي الحديثة مئات الساعات المهدرة، شريطة الالتزام بقواعد النزاهة العلمية وتوثيق المصادر بدقة.
+        يواجه الطلاب والباحثون الأكاديميون تحدياً مزدوجاً في عصر الذكاء الاصطناعي: من جهة، هناك رغبة جارفة للاستفادة من سرعة هذه الأدوات في مسح آلاف الأوراق البحثية، ومن جهة أخرى، هناك تخوف مشروع من انتهاك معايير النزاهة الأكاديمية أو الوقوع في فخ المراجع الوهمية التي قد تبتكرها بعض النماذج العامة. يوضح هذا الدليل المنهجية الآمنة والصحيحة لاستخدام أدوات الذكاء الاصطناعي كشريك بحثي مساعد وموثوق.
       </p>
 
       <div class="my-8 rounded-2xl overflow-hidden border border-slate-800 bg-slate-950 p-2 shadow-2xl">
         <img 
           src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=1200&q=80" 
-          alt="دليل الطلاب والباحثين في استخدام أدوات الذكاء الاصطناعي في الأبحاث" 
+          alt="استخدام الذكاء الاصطناعي في البحث العلمي والدراسات الأكاديمية" 
           class="w-full h-auto rounded-xl object-cover max-h-[400px]" 
         />
         <p class="text-center text-xs text-slate-400 mt-2 font-mono">
-          استخدام الأدوات الأكاديمية الذكية لاستخراج الحقائق العلمية وتوثيق المراجع بدقة
+          توظيف محركات البحث الأكاديمية الذكية لاستخراج الحقائق العلمية والمراجع الموثقة
         </p>
       </div>
 
       <h2 class="text-2xl font-bold text-indigo-400 mt-8 mb-4 border-r-4 border-indigo-500 pr-3">
-        أفضل الأدوات الأكاديمية المتخصصة في البحث العلمي
+        أقوى 4 أدوات أكاديمية متخصصة لا تبتكر مراجع وهمية
       </h2>
       <div class="space-y-4 mb-6">
         <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
-          <h4 class="font-bold text-white text-base mb-1">1. Consensus.app</h4>
+          <h4 class="font-bold text-white text-base mb-1">1. Consensus.app (محرك الإجماع العلمي)</h4>
           <p class="text-slate-300 text-sm leading-relaxed">
-            محرك بحث علمي يبحث مباشرة في أكثر من 200 مليون ورقة بحثية محكمة للإجابة عن أسئلتك مع ذكر المراجع ونسبة إجماع العلماء على النتائج.
+            محرك بحث يبحث حصرياً داخل أكثر من 200 مليون ورقة بحثية محكمة (Peer-reviewed Papers) ويقدم نسبة الإجماع العلمي حول الأسئلة الطبية والتكنولوجية مع ذكر رقم الـ DOI ورابط البحث الأصلي.
           </p>
         </div>
         <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
-          <h4 class="font-bold text-white text-base mb-1">2. Elicit.com</h4>
+          <h4 class="font-bold text-white text-base mb-1">2. Google NotebookLM</h4>
           <p class="text-slate-300 text-sm leading-relaxed">
-            أداة فائقة القوة لاستخراج البيانات والمقارنة بين منهجيات الأوراق البحثية وتلخيص النتائج في جداول منظمة قابلة للتصدير.
+            أداة مجانية ثورية تتيح لك رفع ملفات الـ PDF الخاصة برسالتك الجامعية ومصادرك فقط، وتجيبك حصرياً مما تحتويه ملفاتك مع استشهاد مباشر بأرقام الصفحات، مما يجعل نسبة الهلوسة 0%.
           </p>
         </div>
         <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
-          <h4 class="font-bold text-white text-base mb-1">3. NotebookLM by Google</h4>
+          <h4 class="font-bold text-white text-base mb-1">3. Elicit.com</h4>
           <p class="text-slate-300 text-sm leading-relaxed">
-            دفتر ملاحظات ذكي من Google يستوعب مذكراتك وكتبك بصيغة PDF ويجيب حصرياً من داخل مصادرك دون أية هلوسة مع توثيق أرقام الصفحات والاقتباسات.
+            مساعد بحثي يقوم ببناء جدول مقارنة منهجي يلخص الأهداف والمنهجيات وحجم العينة والنتائج لأي موضوع بحثي في دقائق.
+          </p>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
+          <h4 class="font-bold text-white text-base mb-1">4. Scite.ai</h4>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            أداة تتيح لك معرفة ما إذا كانت الأبحاث اللاحقة قد أكدت (Supported) أو ناقضت (Contrasted) نتائج الدراسة التي تعتمد عليها في أطروحتك.
           </p>
         </div>
       </div>
-
-      <h2 class="text-2xl font-bold text-indigo-400 mt-8 mb-4 border-r-4 border-indigo-500 pr-3">
-        القواعد الخمس للنزاهة الأكاديمية عند استخدام الذكاء الاصطناعي
-      </h2>
-      <ul class="list-disc list-inside space-y-2 mb-6 text-slate-300 pr-2 leading-relaxed">
-        <li><strong>لا تدع AI يكتب البحث نيابة عنك:</strong> استخدمه كمساعد في العصف الذهني وإعادة الصياغة اللغوية وليس لإنتاج المحتوى الفكري الأساسي.</li>
-        <li><strong>تحقق يدوياً من كل مرجع:</strong> النماذج اللغوية العامة قد تخترع مراجع وهمية (Fake Citations)؛ تأكد دائماً من وجود الورقة العلمية عبر DOI.</li>
-        <li><strong>أعلن عن استخدامك للأدوات بشفافية:</strong> وثق في منهجية بحثك الأدوات التي استخدمتها في الترجمة أو التدقيق اللغوي.</li>
-      </ul>
     `
   },
 
   // =========================================================================
-  // ARTICLE 10: أمن الأكواد وسرية البيانات في عصر الذكاء الاصطناعي
+  // ARTICLE 10: أمن الأكواد وسرية البيانات
   // =========================================================================
   {
     id: 'ai-code-security-and-data-privacy',
-    title: 'أمن الأكواد وسرية البيانات عند استخدام أدوات الذكاء الاصطناعي: دليل المطورين والشركات لحماية الملكية الفكرية',
+    title: 'أمن الأكواد وسرية البيانات في عصر الذكاء الاصطناعي: كيف تحمي أسرار شركتك من التسريب عبر نماذج LLM',
     slug: 'ai-code-security-and-data-privacy',
-    excerpt: 'دليل أمني شامل للمطورين وفرق DevOps يستعرض مخاطر تسريب الأكواد المصدرية ومفاتيح الـ API إلى خوادم الذكاء الاصطناعي وكيفية وضع سياسات أمان صارمة لحماية المشاريع.',
-    category: 'شروحات عميقة',
-    author: 'يوسف محمد - مهندس برمجيات واستشاري أمن معلومات',
-    publishDate: '2026-08-13',
-    readTime: '15 دقيقة',
-    tags: ['أمن المعلومات', 'Cybersecurity', 'خصوصية البيانات', 'OWASP', 'أسرار برمجية', 'DevOps', 'حماية الكود'],
+    excerpt: 'دليل أمني شامل للمبرمجين ومدراء الأنظمة لحماية الملكية الفكرية، منع تسريب مفاتيح الـ API وبيانات العملاء الحساسة، وضبط سياسات الأمان عند استخدام المساعدات البرمجية.',
+    category: 'مقارنات تقنية',
+    author: 'يوسف محمد - خبير أمن برمجيات',
+    publishDate: '2026-08-05',
+    readTime: '21 دقيقة',
+    tags: ['أمن المعلومات', 'Cybersecurity', 'حماية البيانات', 'LLM Security', 'OWASP', 'خصوصية', 'البرمجة'],
     contentHtml: `
       <p class="text-lg leading-relaxed mb-6 font-medium text-slate-200">
-        بينما يوفر الذكاء الاصطناعي دفعة إنتاجية هائلة، فإنه يفتح في الوقت ذاته أبواباً لمخاطر أمنية وقانونية جسيمة إذا تم استخدامه دون وعي. تعرضت كبرى الشركات العالمية لتسريبات حساسة بسبب قيام مطورين بلصق أكواد تحتوي على أسرار تشفير أو بيانات عملاء في نوافذ محادثات الذكاء الاصطناعي العامة. يوضح هذا الدليل كيفية تأمين بيئة عملك بالكامل والتمتع بمزايا الذكاء الاصطناعي دون تعريض مشروعك للخطر.
+        مع الاعتماد المتسارع على أدوات الذكاء الاصطناعي في بيئات العمل البرمجية، ظهرت مخاطر أمنية جديدة تهدد بتسريب أسرار الشركات وقواعد بياناتها إلى الخوادم السحابية العامة دون قصد من المطورين. في هذا الدليل الأمني، نوضح المعايير والسياسات التقنية الصارمة الواجب تطبيقها لحماية الملكية الفكرية مع الاستفادة القصوى من إنتاجية الذكاء الاصطناعي.
       </p>
 
       <div class="my-8 rounded-2xl overflow-hidden border border-slate-800 bg-slate-950 p-2 shadow-2xl">
         <img 
           src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1200&q=80" 
-          alt="أمن المعلومات وحماية سرية الأكواد البرمجية عند استخدام الذكاء الاصطناعي" 
+          alt="حماية أمن الأكواد والبيانات الحساسة في عصر الذكاء الاصطناعي" 
           class="w-full h-auto rounded-xl object-cover max-h-[400px]" 
         />
         <p class="text-center text-xs text-slate-400 mt-2 font-mono">
-          أفضل الممارسات الأمنية لحماية الملكية الفكرية وتجنب تسريب الأسرار البرمجية
+          تطبيق معايير الأمان المتقدمة وتشفير البيانات لمنع تسرب الشيفرات المصدرية
         </p>
       </div>
 
       <h2 class="text-2xl font-bold text-indigo-400 mt-8 mb-4 border-r-4 border-indigo-500 pr-3">
-        أبرز المخاطر الأمنية وطرق الوقاية منها
+        القواعد الأمنية الأربع لحماية مشاريعك
       </h2>
-
       <div class="space-y-4 my-6">
         <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
-          <h4 class="font-bold text-rose-400 mb-1">1. تسريب مفاتيح الـ API وكلمات المرور (Hardcoded Secrets)</h4>
+          <h4 class="font-bold text-rose-400 mb-1 text-base">1. حظر نسخ مفاتيح الـ API وكلمات المرور (No Secrets in Prompts)</h4>
           <p class="text-slate-300 text-sm leading-relaxed">
-            استخدم دائماً أدوات الفحص التلقائي قبل الإرسال (مثل GitLeaks أو Trufflehog) لمنع رفع أي كود يحتوي على مفاتيح سرية في بيئة الشات.
+            استخدم دائماً متغيرات بيئية وهمية مثل <code class="text-indigo-300 font-mono">process.env.STRIPE_SECRET_KEY</code> عند مشاركة الأكواد مع الذكاء الاصطناعي، وتأكد من إضافة ملفات <code class="text-indigo-300 font-mono">.env</code> إلى ملف <code class="text-indigo-300 font-mono">.gitignore</code>.
           </p>
         </div>
-
         <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
-          <h4 class="font-bold text-rose-400 mb-1">2. استيراد مكتبات وهمية ملغومة (Package Hallucination Typosquatting)</h4>
+          <h4 class="font-bold text-rose-400 mb-1 text-base">2. تعطيل خيار تدريب النماذج على بياناتك (Opt-Out Training)</h4>
           <p class="text-slate-300 text-sm leading-relaxed">
-            يستغل القراصنة أسماء الحزم الوهمية التي يهلوس بها الذكاء الاصطناعي ويرفعون حزم خبيثة بنفس الاسم على npm و PyPI. لا تثبت أي حزمة برمجية اقترحها AI دون التحقق من عدد تنزيلاتها ومستودعها على GitHub.
+            في إعدادات خصوصية ChatGPT و Claude، احرص على إيقاف خيار تحسين النموذج (Model Training on User Data)، أو استخدم واجهات الـ API المباشرة لأنها محمية قانونياً بعدم استخدام البيانات في التدريب.
           </p>
         </div>
-
         <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
-          <h4 class="font-bold text-emerald-400 mb-1">3. الاعتماد على النماذج المحلية في المشاريع الحساسة</h4>
+          <h4 class="font-bold text-rose-400 mb-1 text-base">3. الاعتماد على النماذج المحلية للبيانات فائقة السرية (Local On-Premise AI)</h4>
           <p class="text-slate-300 text-sm leading-relaxed">
-            بالنسبة للمشاريع المالية، الطبية، أو الحكومية، الحل الأمثل هو تشغيل نماذج مفتوحة المصدر (مثل DeepSeek-R1 و Llama 3) داخل شبكة الشركة الداخلية (On-Premises / Air-Gapped) دون اتصال بالإنترنت.
+            للمشروعات المالية والصحية والحساسة، استخدم النماذج المفتوحة مثل <em>DeepSeek-R1</em> و <em>Qwen 2.5 Coder</em> عبر Ollama على خوادم داخلية لا تتصل بالإنترنت الخارجي إطلاقاً.
+          </p>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
+          <h4 class="font-bold text-rose-400 mb-1 text-base">4. الفحص الدوري عبر أدوات تحليل الأمان الساكن (SAST)</h4>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            لا تعتمد على كود الذكاء الاصطناعي دون تمريره على أدوات فحص آلية مثل SonarQube أو Snyk للكشف التلقائي عن الثغرات الشائعة مثل حقن SQL ومشاكل الذاكرة.
           </p>
         </div>
       </div>
@@ -952,46 +1091,6 @@ export const BLOG_POSTS_DATA: BlogPost[] = [
   }
 ];
 
-export const findBlogPostBySlug = (slugOrPath: string): BlogPost | undefined => {
-  if (!slugOrPath) return undefined;
-  const cleanSlug = slugOrPath.toLowerCase().trim().replace(/^\/blog\//, '').replace(/^\//, '');
-  if (!cleanSlug) return undefined;
-
-  // Direct match by slug or id
-  const exact = BLOG_POSTS_DATA.find((post) => post.slug === cleanSlug || post.id === cleanSlug);
-  if (exact) return exact;
-
-  // Match aliases or partial matches
-  if (cleanSlug.includes('chatgpt') && cleanSlug.includes('programming')) {
-    return BLOG_POSTS_DATA.find((p) => p.slug === 'chatgpt-programming-guide');
-  }
-  if (cleanSlug.includes('comparison') || cleanSlug.includes('ai-models') || cleanSlug.includes('claude')) {
-    return BLOG_POSTS_DATA.find((p) => p.slug === 'ai-models-comparison-2026');
-  }
-  if (cleanSlug.includes('prompt') || cleanSlug.includes('50-example')) {
-    return BLOG_POSTS_DATA.find((p) => p.slug === 'professional-prompts-guide');
-  }
-  if (cleanSlug.includes('20-free') || cleanSlug.includes('25-free') || cleanSlug.includes('best-20')) {
-    return BLOG_POSTS_DATA.find((p) => p.slug === 'best-20-free-ai-tools-2026');
-  }
-  if (cleanSlug.includes('learn-programming') || cleanSlug.includes('learn-ai')) {
-    return BLOG_POSTS_DATA.find((p) => p.slug === 'learn-programming-with-ai');
-  }
-  if (cleanSlug.includes('ollama') || cleanSlug.includes('deepseek-local') || cleanSlug.includes('deepseek-ollama')) {
-    return BLOG_POSTS_DATA.find((p) => p.slug === 'deepseek-ollama-local-guide');
-  }
-  if (cleanSlug.includes('game') || cleanSlug.includes('unity') || cleanSlug.includes('godot')) {
-    return BLOG_POSTS_DATA.find((p) => p.slug === 'ai-game-development-guide-2026');
-  }
-  if (cleanSlug.includes('fullstack') || cleanSlug.includes('build-app') || cleanSlug.includes('full-stack')) {
-    return BLOG_POSTS_DATA.find((p) => p.slug === 'build-fullstack-app-with-ai');
-  }
-  if (cleanSlug.includes('research') || cleanSlug.includes('student') || cleanSlug.includes('academic')) {
-    return BLOG_POSTS_DATA.find((p) => p.slug === 'ai-research-and-academic-writing-students');
-  }
-  if (cleanSlug.includes('security') || cleanSlug.includes('privacy') || cleanSlug.includes('cyber')) {
-    return BLOG_POSTS_DATA.find((p) => p.slug === 'ai-code-security-and-data-privacy');
-  }
-
-  return undefined;
-};
+export function findBlogPostBySlug(slug: string): BlogPost | undefined {
+  return BLOG_POSTS_DATA.find(post => post.slug === slug || post.id === slug);
+}
