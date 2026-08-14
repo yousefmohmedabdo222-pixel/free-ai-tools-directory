@@ -1,4 +1,17 @@
+# robots.txt for https://free-ai-tools-directory-three.vercel.app/
 User-agent: *
 Allow: /
+Disallow: /api/
 
+# Search Engine Crawlers Specific Rules
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+# Sitemap Location
 Sitemap: https://free-ai-tools-directory-three.vercel.app/sitemap.xml

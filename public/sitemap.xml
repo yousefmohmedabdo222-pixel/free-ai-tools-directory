@@ -1,75 +1,103 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- Main Application Landing Page -->
   <url>
     <loc>https://free-ai-tools-directory-three.vercel.app/</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>daily</changefreq>
-    <priority>1.0</priority>
+    <priority>1.00</priority>
   </url>
+
+  <!-- Technical Blog Index -->
   <url>
     <loc>https://free-ai-tools-directory-three.vercel.app/blog</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.9</priority>
+    <priority>0.90</priority>
   </url>
+
+  <!-- Blog Article 1: ChatGPT Programming Guide -->
   <url>
     <loc>https://free-ai-tools-directory-three.vercel.app/blog/chatgpt-programming-guide</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
+
+  <!-- Blog Article 2: AI Models Comparison 2026 -->
   <url>
     <loc>https://free-ai-tools-directory-three.vercel.app/blog/ai-models-comparison-2026</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
+
+  <!-- Blog Article 3: Professional Prompts Guide -->
   <url>
     <loc>https://free-ai-tools-directory-three.vercel.app/blog/professional-prompts-guide</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
+
+  <!-- Blog Article 4: Best 20 Free AI Tools 2026 -->
   <url>
     <loc>https://free-ai-tools-directory-three.vercel.app/blog/best-20-free-ai-tools-2026</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
+
+  <!-- Blog Article 5: Learn Programming with AI -->
   <url>
     <loc>https://free-ai-tools-directory-three.vercel.app/blog/learn-programming-with-ai</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
+
+  <!-- Blog Article 6: DeepSeek & Ollama Local Guide -->
   <url>
     <loc>https://free-ai-tools-directory-three.vercel.app/blog/deepseek-ollama-local-guide</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
+
+  <!-- Blog Article 7: AI Game Development & Pixel Art Guide -->
   <url>
     <loc>https://free-ai-tools-directory-three.vercel.app/blog/ai-game-development-guide-2026</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
+
+  <!-- Blog Article 8: Build Full-Stack Apps with AI -->
   <url>
     <loc>https://free-ai-tools-directory-three.vercel.app/blog/build-fullstack-app-with-ai</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
+
+  <!-- Blog Article 9: AI Research & Academic Writing for Students -->
   <url>
     <loc>https://free-ai-tools-directory-three.vercel.app/blog/ai-research-and-academic-writing-students</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
+
+  <!-- Blog Article 10: AI Code Security & Data Privacy -->
   <url>
     <loc>https://free-ai-tools-directory-three.vercel.app/blog/ai-code-security-and-data-privacy</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
+
 </urlset>
