@@ -73,10 +73,15 @@ export interface AIModelSpec {
   provider: string;
   releaseYear: string;
   contextWindow: string;
+  parameterCount?: string;
+  architecture?: string;
+  modelType?: 'reasoning' | 'coding' | 'multimodal' | 'open-source' | 'general';
   freeDailyTier: string;
   speedRating: number; // 1-10
   codingRating: number; // 1-10
   arabicRating: number; // 1-10
+  reasoningRating?: number; // 1-10
+  visionAudioSupport?: string;
   strengths: string[];
   limitations: string[];
   bestUseCases: string;
