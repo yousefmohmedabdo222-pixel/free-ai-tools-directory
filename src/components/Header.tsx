@@ -67,9 +67,9 @@ export const Header: React.FC<HeaderProps> = ({
           : 'bg-white/90 border-slate-200 text-slate-800 backdrop-blur-md shadow-xs'
       }`}
     >
-      {/* AdSense Top Header Banner Notice / Placeholder */}
-      <div id="ad-banner-top-container" className="bg-gradient-to-r from-indigo-900/80 via-purple-900/80 to-slate-900 text-white text-xs py-1.5 px-4 text-center border-b border-indigo-500/20 flex items-center justify-center gap-2">
-        <span className="bg-indigo-500/30 text-indigo-200 text-[10px] font-bold px-2 py-0.5 rounded border border-indigo-400/30">إعلان</span>
+      {/* Top Header Announcement Bar */}
+      <div id="top-announcement-bar" className="bg-gradient-to-r from-indigo-900/80 via-purple-900/80 to-slate-900 text-white text-xs py-1.5 px-4 text-center border-b border-indigo-500/20 flex items-center justify-center gap-2">
+        <span className="bg-indigo-500/30 text-indigo-200 text-[10px] font-bold px-2 py-0.5 rounded border border-indigo-400/30">جديد 2026</span>
         <span className="font-medium">دليل 2026 المحدث لأفضل أدوات الذكاء الاصطناعي المجانية بالكامل وبدون قيود</span>
       </div>
 

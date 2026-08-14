@@ -57,15 +57,15 @@ export const BlogList: React.FC<BlogListProps> = ({
         <div className="text-center max-w-3xl mx-auto space-y-3 mb-10">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-bold bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">
             <BookOpen className="w-4 h-4" />
-            <span>مركز المقالات الشاملة والشروحات التقنية</span>
+            <span>مركز الشروحات والأدلة البرمجية</span>
           </div>
 
           <h1 className="text-3xl sm:text-5xl font-black tracking-tight text-gradient bg-clip-text text-transparent bg-gradient-to-r from-indigo-300 via-purple-300 to-pink-300">
-            الشروحات والمقالات التقنية (AdSense Ready)
+            المقالات والشروحات التقنية المتخصصة
           </h1>
 
           <p className={`text-xs sm:text-sm leading-relaxed ${darkMode ? 'text-slate-300' : 'text-slate-600'}`}>
-            استكشف المقالات والمقارنات الشاملة لمساعدتك في اختيار أدوات الذكاء الاصطناعي الأنسب لمشاريعك البرمجية والدراسية مجاناً.
+            مقالات معمقة، مقارنات حيادية، وأدلة عملية موثوقة كتبها مهندسو برمجيات لمساعدتك في استثمار أدوات الذكاء الاصطناعي في مشاريعك ودراستك بكفاءة وأمان.
           </p>
         </div>
 
