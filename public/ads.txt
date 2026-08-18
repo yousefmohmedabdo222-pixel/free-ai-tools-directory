@@ -1,2 +1,1 @@
-# Google AdSense ads.txt - قم باستبدال pub-XXXXXXXXXXXXXXXX برقم تعريف ناشر AdSense الخاص بك بعد الموافقة
-google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
+google.com, pub-6594391134376233, DIRECT, f08c47fec0942fa0
